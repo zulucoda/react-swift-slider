@@ -32,6 +32,15 @@ class App extends Component {
 }
 ```
 
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| data   | Array | Array of slide id & src's |
+| height  | Number | Height of slider default 460px |
+| interval   | Number | Slide interval duration default 5000 |
+| activeDotColor   | String | Active dot color  |
+| dotColor  | String | Dot color  |
+
+
 ### add the styles
 (looking for a better way to package css modules)
 
