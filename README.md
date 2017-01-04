@@ -1,12 +1,16 @@
-### react slider
+### React Swift Slider
 ==============
-
-npm i
+```
+npm i react-swift-slider
+```
 
 add styles
 
-import Slider from '...'
+```javascript
+import SwiftSlider from 'react-swift-slider'
+```
 
+```javascript
 const data =  [
   {'id':'1','src':'https://picjumbo.imgix.net/HNCK9192.jpg?q=40&w=1650&sharp=30'},
   {'id':'2','src':'https://picjumbo.imgix.net/HNCK3313.jpg?q=40&w=1650&sharp=30'},
@@ -15,4 +19,5 @@ const data =  [
   {'id':'5','src':'https://picjumbo.imgix.net/HNCK3286.jpg?q=40&w=1650&sharp=30'}
 ];
 
-<Slider data={data}/>
+<SwiftSlider data={data}/>
+```
