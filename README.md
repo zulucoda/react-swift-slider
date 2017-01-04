@@ -1,5 +1,7 @@
 ## React SwiftSlider
 
+React Slider Component
+
 
 [Demo](http://ill-informed-position.surge.sh/)
 
@@ -31,6 +33,8 @@ class App extends Component {
   }
 }
 ```
+
+### Available Props
 
 | Prop | Type | Description |
 | :------| :-----------| :-----------|
