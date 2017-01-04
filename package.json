@@ -1,7 +1,7 @@
 {
-  "name": "react-hot-boilerplate",
+  "name": "react-swift-slider",
   "version": "0.0.1",
-  "description": "Boilerplate for ReactJS project with hot code reloading",
+  "description": "React slider",
   "main": "dist/index.js",
   "scripts": {
     "start": "node server.js",
