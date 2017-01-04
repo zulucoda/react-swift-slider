@@ -9,7 +9,7 @@ var _react = require('react');
 var _react2 = _interopRequireDefault(_react);
 
 var _styles = {
-  'dot': 'styles__dot___1nAMY'
+  'dot': 'styles__dot___16MUI'
 };
 
 var _styles2 = _interopRequireDefault(_styles);

@@ -1,7 +1,8 @@
 ## React Swift Slider
-==============
+
 
 [Demo](http://ill-informed-position.surge.sh/)
+
 
 
 ```

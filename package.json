@@ -1,35 +1,29 @@
 {
   "name": "react-swift-slider",
   "version": "0.0.1",
-  "description": "React slider",
+  "description": "React Swift Slider",
   "main": "dist/index.js",
   "scripts": {
     "start": "node server.js",
-    "build": "babel lib --plugins css-modules-transform --out-dir dist",
+    "build": "babel src --plugins css-modules-transform --out-dir dist",
     "buildcss": "NODE_ENV=production node_modules/.bin/webpack --config webpack.config.prod.js",
     "lint": "eslint src"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/react-hot-boilerplate.git"
+    "url": "https://github.com/andyfen/react-swift-slider"
   },
   "keywords": [
     "react",
     "reactjs",
-    "boilerplate",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack"
+    "slider"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "Andy Fenelon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
+    "url": "https://github.com/andyfen/react-swift-slider/issues"
   },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+  "homepage": "https://github.com/andyfen/react-swift-slider",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.0.20",

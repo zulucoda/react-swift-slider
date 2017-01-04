@@ -15,9 +15,9 @@ var _bind = require('classnames/bind');
 var _bind2 = _interopRequireDefault(_bind);
 
 var _styles = {
-  'slide': 'styles__slide___2s8d0',
-  'active': 'styles__active___241gW',
-  'image': 'styles__image___85_HT'
+  'slide': 'styles__slide___FVBAo',
+  'active': 'styles__active___e4bTj',
+  'image': 'styles__image___1iSTN'
 };
 
 var _styles2 = _interopRequireDefault(_styles);

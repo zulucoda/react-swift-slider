@@ -11,10 +11,10 @@ var _react = require('react');
 var _react2 = _interopRequireDefault(_react);
 
 var _styles = {
-  'container': 'styles__container___2FEDL',
-  'row': 'styles__row___9LUlv',
-  'slides': 'styles__slides____Fpxl',
-  'dots': 'styles__dots___2IjDX'
+  'container': 'styles__container___14JyY',
+  'row': 'styles__row___3d9ZU',
+  'slides': 'styles__slides___2_7_m',
+  'dots': 'styles__dots___36tjg'
 };
 
 var _styles2 = _interopRequireDefault(_styles);

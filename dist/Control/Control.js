@@ -9,10 +9,8 @@ var _react = require('react');
 var _react2 = _interopRequireDefault(_react);
 
 var _styles = {
-  'container__prev': 'styles__container__prev___3sMDE',
-  'container__next': 'styles__container__next___cyGe4',
-  'prev': 'styles__prev___34nH8',
-  'next': 'styles__next___19Pfz'
+  'container__prev': 'styles__container__prev___20JPr',
+  'container__next': 'styles__container__next___3qkXi'
 };
 
 var _styles2 = _interopRequireDefault(_styles);
