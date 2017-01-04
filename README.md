@@ -1,4 +1,4 @@
-## React Swift Slider
+## React SwiftSlider
 
 
 [Demo](http://ill-informed-position.surge.sh/)
