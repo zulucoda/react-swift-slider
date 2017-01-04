@@ -1,5 +1,9 @@
-### React Swift Slider
+## React Swift Slider
 ==============
+
+[Demo](http://ill-informed-position.surge.sh/)
+
+
 ```
 npm i react-swift-slider
 ```
