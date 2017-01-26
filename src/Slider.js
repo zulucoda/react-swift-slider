@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './styles.css';
+import { StyleSheet, css } from 'aphrodite';
 
-import Slide from '../Slide';
-import Control from '../Control';
-import Dot from '../Dot';
+import Slide from './Slide';
+import Control from './Control';
+import Dot from './Dot';
 
-class Slider extends React.Component {
+export default class Slider extends React.Component {
   static propTypes = {
     data: React.PropTypes.array.isRequired,
     height: React.PropTypes.number,
@@ -46,12 +46,12 @@ class Slider extends React.Component {
   prevSlide = () => {
     if(this.state.currentSlide === 0){
       this.setState({
-        currentSlide: this.props.data.length-1
+        currentSlide: this.props.data.length - 1
       })
       return;
     }
     this.setState({
-      currentSlide: this.state.currentSlide -1
+      currentSlide: this.state.currentSlide - 1
     })
     this.resetInterval();
   }
@@ -64,14 +64,15 @@ class Slider extends React.Component {
   render(){
     const { data, height, activeDotColor, dotColor } = this.props;
     return(
-      <div className={styles.container} style={{ height }}>
-
-        <ul className={styles.slides} style={{ height }}>
+      <div className={css(styles.container)} /*style={{ height }}*/>
+        <ul className={css(styles.slides)} /*style={{ height }}*/>
           {data.map((item, i) =>
-            <Slide active={i === this.state.currentSlide} src={item.src} key={item.id}/>
+            <Slide active={i === this.state.currentSlide}
+              src={item.src}
+              key={item.id}/>
           )}
         </ul>
-        <ul className={styles.dots}>
+        <ul className={css(styles.dots)} >
           {data.map((item, i) =>
             <Dot
               activeDotColor={activeDotColor}
@@ -93,4 +94,34 @@ class Slider extends React.Component {
   }
 }
 
-export default Slider;
+const styles = StyleSheet.create({
+  container: {
+    position: 'relative',
+    height: '450px',
+    //'@media (max-width: 600px)': {
+    //  height: '250px',
+    //}
+  },
+  row: {
+    display: 'flex',
+    flexDirection: 'row'
+  },
+  slides: {
+    height: '450px',
+    position: 'relative',
+    padding: '0px',
+    margin: '0px',
+    listStyle: 'none',
+    //'@media (max-width: 600px)': {
+    //  height: '250px',
+    //}
+  },
+  dots: {
+    listStyle: 'none',
+    margin: '1.7rem 0',
+    padding: 0,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center'
+  }
+})
