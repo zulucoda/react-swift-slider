@@ -1,12 +1,11 @@
 {
   "name": "react-swift-slider",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Swift Slider",
   "main": "dist/index.js",
   "scripts": {
     "start": "node server.js",
-    "build": "babel src --plugins css-modules-transform --out-dir dist",
-    "buildcss": "NODE_ENV=production node_modules/.bin/webpack --config webpack.config.prod.js",
+    "build": "babel src --out-dir dist",
     "lint": "eslint src"
   },
   "repository": {

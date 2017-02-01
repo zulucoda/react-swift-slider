@@ -12,15 +12,15 @@ var _react2 = _interopRequireDefault(_react);
 
 var _aphrodite = require('aphrodite');
 
-var _Slide = require('../Slide');
+var _Slide = require('./Slide');
 
 var _Slide2 = _interopRequireDefault(_Slide);
 
-var _Control = require('../Control');
+var _Control = require('./Control');
 
 var _Control2 = _interopRequireDefault(_Control);
 
-var _Dot = require('../Dot');
+var _Dot = require('./Dot');
 
 var _Dot2 = _interopRequireDefault(_Dot);
 
@@ -98,10 +98,10 @@ var Slider = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: (0, _aphrodite.css)(styles.container), style: { height: height } },
+        { className: (0, _aphrodite.css)(styles.container) },
         _react2.default.createElement(
           'ul',
-          { className: (0, _aphrodite.css)(styles.slides), style: { height: height } },
+          { className: (0, _aphrodite.css)(styles.slides) },
           data.map(function (item, i) {
             return _react2.default.createElement(_Slide2.default, { active: i === _this2.state.currentSlide,
               src: item.src,
@@ -152,17 +152,25 @@ exports.default = Slider;
 
 var styles = _aphrodite.StyleSheet.create({
   container: {
-    position: 'relative'
+    position: 'relative',
+    height: '450px',
+    '@media (max-width: 600px)': {
+      height: '250px'
+    }
   },
   row: {
     display: 'flex',
     flexDirection: 'row'
   },
   slides: {
+    height: '450px',
     position: 'relative',
     padding: '0px',
     margin: '0px',
-    listStyle: 'none'
+    listStyle: 'none',
+    '@media (max-width: 600px)': {
+      height: '250px'
+    }
   },
   dots: {
     listStyle: 'none',
@@ -170,6 +178,9 @@ var styles = _aphrodite.StyleSheet.create({
     padding: 0,
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    '@media (max-width: 600px)': {
+      margin: '1rem 0'
+    }
   }
 });
