@@ -18,4 +18,4 @@ require('normalize-css');
 
 var data = [{ 'id': '1', 'src': 'https://picjumbo.imgix.net/HNCK9192.jpg?q=40&w=1650&sharp=30' }, { 'id': '2', 'src': 'https://picjumbo.imgix.net/HNCK3313.jpg?q=40&w=1650&sharp=30' }, { 'id': '3', 'src': 'https://picjumbo.imgix.net/HNCK4330.jpg?q=40&w=1650&sharp=30' }, { 'id': '4', 'src': 'https://picjumbo.imgix.net/HNCK0180.jpg?q=40&w=1650&sharp=30' }, { 'id': '5', 'src': 'https://picjumbo.imgix.net/HNCK3286.jpg?q=40&w=1650&sharp=30' }];
 
-_reactDom2.default.render(_react2.default.createElement(_Slider2.default, { data: data }), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_Slider2.default, { data: data, height: 900, showDots: false, enableNextAndPrev: false }), document.getElementById('root'));

@@ -94,21 +94,23 @@ var Slider = function (_React$Component) {
           data = _props.data,
           height = _props.height,
           activeDotColor = _props.activeDotColor,
-          dotColor = _props.dotColor;
+          dotColor = _props.dotColor,
+          showDots = _props.showDots,
+          enableNextAndPrev = _props.enableNextAndPrev;
 
       return _react2.default.createElement(
         'div',
         { className: (0, _aphrodite.css)(styles.container) },
         _react2.default.createElement(
           'ul',
-          { className: (0, _aphrodite.css)(styles.slides) },
+          { className: (0, _aphrodite.css)(styles.slides), style: { height: height + 'px !important' } },
           data.map(function (item, i) {
             return _react2.default.createElement(_Slide2.default, { active: i === _this2.state.currentSlide,
               src: item.src,
               key: item.id });
           })
         ),
-        _react2.default.createElement(
+        showDots ? _react2.default.createElement(
           'ul',
           { className: (0, _aphrodite.css)(styles.dots) },
           data.map(function (item, i) {
@@ -120,13 +122,13 @@ var Slider = function (_React$Component) {
               idx: i
             });
           })
-        ),
-        _react2.default.createElement(_Control2.default, {
+        ) : '',
+        enableNextAndPrev ? _react2.default.createElement(_Control2.default, {
           onPressPrev: this.prevSlide,
-          direction: 'prev' }),
-        _react2.default.createElement(_Control2.default, {
+          direction: 'prev' }) : '',
+        enableNextAndPrev ? _react2.default.createElement(_Control2.default, {
           onPressNext: this.nextSlide,
-          direction: 'next' })
+          direction: 'next' }) : ''
       );
     }
   }]);
@@ -139,13 +141,17 @@ Slider.propTypes = {
   height: _react2.default.PropTypes.number,
   interval: _react2.default.PropTypes.number,
   activeDotColor: _react2.default.PropTypes.string,
-  dotColor: _react2.default.PropTypes.string
+  dotColor: _react2.default.PropTypes.string,
+  showDots: _react2.default.PropTypes.bool,
+  enableNextAndPrev: _react2.default.PropTypes.bool
 };
 Slider.defaultProps = {
   height: 450,
   activeDotColor: '#e8784e',
   interval: 5000,
-  dotColor: '#909192'
+  dotColor: '#909192',
+  showDots: true,
+  enableNextAndPrev: true
 };
 exports.default = Slider;
 
