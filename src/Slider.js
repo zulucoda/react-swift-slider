@@ -65,7 +65,7 @@ export default class Slider extends React.Component {
     const { data, height, activeDotColor, dotColor } = this.props;
     return(
       <div className={css(styles.container)}>
-        <ul className={css(styles.slides)}>
+        <ul className={css(styles.slides)} style={{height: `${height}px !important`}}>
           {data.map((item, i) =>
             <Slide active={i === this.state.currentSlide}
               src={item.src}
