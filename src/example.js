@@ -12,4 +12,4 @@ const data =  [
   {'id':'5','src':'https://picjumbo.imgix.net/HNCK3286.jpg?q=40&w=1650&sharp=30'}
 ];
 
-ReactDOM.render(<Slider data={data} height={900}/>, document.getElementById('root'));
+ReactDOM.render(<Slider data={data} height={900} showDots={false}/>, document.getElementById('root'));
