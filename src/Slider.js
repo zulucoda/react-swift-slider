@@ -12,14 +12,16 @@ export default class Slider extends React.Component {
     interval: React.PropTypes.number,
     activeDotColor: React.PropTypes.string,
     dotColor: React.PropTypes.string,
-    showDots: React.PropTypes.bool
+    showDots: React.PropTypes.bool,
+    enableNextAndPrev: React.PropTypes.bool
   };
   static defaultProps = {
     height: 450,
     activeDotColor: '#e8784e',
     interval: 5000,
     dotColor: '#909192',
-    showDots: true
+    showDots: true,
+    enableNextAndPrev: true
   };
   constructor(props){
     super(props);
@@ -64,7 +66,7 @@ export default class Slider extends React.Component {
     this.resetInterval();
   }
   render(){
-    const { data, height, activeDotColor, dotColor, showDots } = this.props;
+    const { data, height, activeDotColor, dotColor, showDots, enableNextAndPrev } = this.props;
     return(
       <div className={css(styles.container)}>
         <ul className={css(styles.slides)} style={{height: `${height}px !important`}}>
@@ -86,12 +88,14 @@ export default class Slider extends React.Component {
             />
           )}
         </ul> : ''}
-        <Control
-          onPressPrev={this.prevSlide}
-          direction="prev"/>
-        <Control
-          onPressNext={this.nextSlide}
-          direction="next"/>
+        {enableNextAndPrev ?
+          <Control
+            onPressPrev={this.prevSlide}
+            direction="prev"/> : ''}
+        {enableNextAndPrev ?
+          <Control
+            onPressNext={this.nextSlide}
+            direction="next"/> : ''}
       </div>
     )
   }
