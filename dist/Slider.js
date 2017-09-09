@@ -100,10 +100,10 @@ var Slider = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: (0, _aphrodite.css)(styles.container), style: { height: height + 'px !important' } },
+        { className: (0, _aphrodite.css)(styles.container), style: { height: height } },
         _react2.default.createElement(
           'ul',
-          { className: (0, _aphrodite.css)(styles.slides), style: { height: height + 'px !important' } },
+          { className: (0, _aphrodite.css)(styles.slides), style: { height: height } },
           data.map(function (item, i) {
             return _react2.default.createElement(_Slide2.default, { active: i === _this2.state.currentSlide,
               src: item.src,

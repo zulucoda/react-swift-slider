@@ -68,8 +68,8 @@ export default class Slider extends React.Component {
   render(){
     const { data, height, activeDotColor, dotColor, showDots, enableNextAndPrev } = this.props;
     return(
-      <div className={css(styles.container)} style={{height: `${height}px !important`}}>
-        <ul className={css(styles.slides)} style={{height: `${height}px !important`}}>
+      <div className={css(styles.container)} style={{height: height }}>
+        <ul className={css(styles.slides)} style={{height: height }}>
           {data.map((item, i) =>
             <Slide active={i === this.state.currentSlide}
               src={item.src}
