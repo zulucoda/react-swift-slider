@@ -100,7 +100,7 @@ var Slider = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: (0, _aphrodite.css)(styles.container) },
+        { className: (0, _aphrodite.css)(styles.container), style: { height: height + 'px !important' } },
         _react2.default.createElement(
           'ul',
           { className: (0, _aphrodite.css)(styles.slides), style: { height: height + 'px !important' } },
@@ -159,7 +159,6 @@ exports.default = Slider;
 var styles = _aphrodite.StyleSheet.create({
   container: {
     position: 'relative',
-    height: '450px',
     '@media (max-width: 600px)': {
       height: '250px'
     }
@@ -169,7 +168,6 @@ var styles = _aphrodite.StyleSheet.create({
     flexDirection: 'row'
   },
   slides: {
-    height: '450px',
     position: 'relative',
     padding: '0px',
     margin: '0px',
