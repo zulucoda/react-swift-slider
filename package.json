@@ -1,6 +1,6 @@
 {
   "name": "react-swift-slider",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React Swift Slider",
   "main": "dist/index.js",
   "scripts": {
