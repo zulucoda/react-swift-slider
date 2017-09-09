@@ -68,7 +68,7 @@ export default class Slider extends React.Component {
   render(){
     const { data, height, activeDotColor, dotColor, showDots, enableNextAndPrev } = this.props;
     return(
-      <div className={css(styles.container)}>
+      <div className={css(styles.container)} style={{height: `${height}px !important`}}>
         <ul className={css(styles.slides)} style={{height: `${height}px !important`}}>
           {data.map((item, i) =>
             <Slide active={i === this.state.currentSlide}
@@ -104,7 +104,6 @@ export default class Slider extends React.Component {
 const styles = StyleSheet.create({
   container: {
     position: 'relative',
-    height: '450px',
     '@media (max-width: 600px)': {
       height: '250px',
     }
@@ -114,7 +113,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   slides: {
-    height: '450px',
     position: 'relative',
     padding: '0px',
     margin: '0px',
