@@ -3,24 +3,36 @@
  * Copyright mfbproject.co.za - muzi@mfbproject.co.za
  * Copyright zulucoda - mfbproject
  */
-import React from 'react';
-import { shallow } from 'enzyme';
-import Control, { DIRECTION } from '../Control';
+import React from "react";
+import { shallow } from "enzyme";
+import Control, { DIRECTION } from "../Control";
 
-describe('Control - Unit Test', () => {
-  describe('previous', () => {
-    it('should render previous div with previous on click function', () => {
+describe("Control - Unit Test", () => {
+  describe("previous", () => {
+    it("should render previous div with previous on click function", () => {
       const onPressPrev = jest.fn();
-      const wrapper = shallow(<Control direction={DIRECTION.prev} onPressPrev={onPressPrev}/>)
-      expect(wrapper.contains(<div className={DIRECTION.prev} onClick={onPressPrev}/>)).toBeTruthy();
+      const wrapper = shallow(
+        <Control direction={DIRECTION.prev} onPressPrev={onPressPrev} />
+      );
+      expect(
+        wrapper.contains(
+          <div className={DIRECTION.prev} onClick={onPressPrev} />
+        )
+      ).toBeTruthy();
     });
   });
 
-  describe('next', () => {
-    it('should render next div with next on click function', () => {
+  describe("next", () => {
+    it("should render next div with next on click function", () => {
       const onNextPrev = jest.fn();
-      const wrapper = shallow(<Control direction={DIRECTION.next} onPressNext={onNextPrev}/>)
-      expect(wrapper.contains(<div className={DIRECTION.next} onClick={onNextPrev}/>)).toBeTruthy();
+      const wrapper = shallow(
+        <Control direction={DIRECTION.next} onPressNext={onNextPrev} />
+      );
+      expect(
+        wrapper.contains(
+          <div className={DIRECTION.next} onClick={onNextPrev} />
+        )
+      ).toBeTruthy();
     });
   });
 });

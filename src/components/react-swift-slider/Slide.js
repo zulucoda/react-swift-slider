@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
-import './assets/sass/react-swift-slide.css';
+import React, { Component } from "react";
+import "./assets/sass/react-swift-slide.css";
 
 class Slide extends Component {
-  render(){
+  render() {
     const { src, active } = this.props;
-    const selectedClass = active ? 'slide active' : 'slide';
-    return(
+    const selectedClass = active ? "slide active" : "slide";
+    return (
       <li
         className={selectedClass}
-        style={{backgroundImage: 'url(' + src + ')'}}/>
-    )
+        style={{ backgroundImage: "url(" + src + ")" }}
+      />
+    );
   }
 }
 export default Slide;

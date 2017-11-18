@@ -3,4 +3,4 @@
  * Copyright mfbproject.co.za - muzi@mfbproject.co.za
  * Copyright zulucoda - mfbproject
  */
-export Slider from './Slider';
+export Slider from "./Slider";
