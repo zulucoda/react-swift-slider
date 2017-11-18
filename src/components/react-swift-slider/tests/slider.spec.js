@@ -4,8 +4,13 @@
  * Copyright zulucoda - mfbproject
  */
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import Slider from "../Slider";
+import { JSDOM } from "jsdom";
+
+const { document } = new JSDOM("").window;
+global.document = document;
+global.window = document.defaultView;
 
 describe("Slider - Unit Test", () => {
   const data = [
@@ -37,5 +42,59 @@ describe("Slider - Unit Test", () => {
     expect(wrapper.find(".slides").length).toEqual(1);
   });
 
-  it("");
+  it("should go to position 4 when on the first slide when clicking on next", () => {
+    const wrapper = mount(<Slider data={data} />);
+    expect(wrapper.state().currentSlide).toEqual(0);
+    wrapper.find("div.prev").simulate("click");
+    expect(wrapper.state().currentSlide).toEqual(4);
+  });
+
+  it("should go to previous slide", () => {
+    const wrapper = mount(<Slider data={data} />);
+    wrapper.find("div.prev").simulate("click");
+    expect(wrapper.state().currentSlide).toEqual(4);
+    wrapper.find("div.prev").simulate("click");
+    expect(wrapper.state().currentSlide).toEqual(3);
+  });
+
+  it("should go to next slide", () => {
+    const wrapper = mount(<Slider data={data} />);
+    expect(wrapper.state().currentSlide).toEqual(0);
+    wrapper.find("div.next").simulate("click");
+    expect(wrapper.state().currentSlide).toEqual(1);
+  });
+
+  it("should go to position 0 when on the last slide when clicking on next", () => {
+    const wrapper = mount(<Slider data={[data[0], data[1]]} />);
+    expect(wrapper.state().currentSlide).toEqual(0);
+    wrapper.find("div.next").simulate("click");
+    expect(wrapper.state().currentSlide).toEqual(1);
+    wrapper.find("div.next").simulate("click");
+    expect(wrapper.state().currentSlide).toEqual(0);
+  });
+
+  it("should go slide when clicking on a dot", () => {
+    const wrapper = mount(<Slider data={data} />);
+    expect(wrapper.state().currentSlide).toEqual(0);
+    wrapper
+      .find("li.dot")
+      .at(3)
+      .simulate("click");
+    expect(wrapper.state().currentSlide).toEqual(3);
+  });
+
+  it("should not show dots", () => {
+    const wrapper = shallow(<Slider data={data} showDots={false} />);
+    expect(wrapper.find(".dots").length).toEqual(0);
+  });
+
+  it("should not show dots", () => {
+    const wrapper = shallow(<Slider data={data} showDots={false} />);
+    expect(wrapper.find(".dots").length).toEqual(0);
+  });
+
+  it("should not show next and previous", () => {
+    const wrapper = shallow(<Slider data={data} enableNextAndPrev={false} />);
+    expect(wrapper.find("Control").length).toEqual(0);
+  });
 });
