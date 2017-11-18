@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - npm test
+  - npm run build
+after_script: # Upload coverage reports
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
+notifications:
+  email:
+    on_success: change
+    on_failure: always
