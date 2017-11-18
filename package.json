@@ -51,6 +51,7 @@
     "lib": "babel src/components --out-dir lib --copy-files",
     "test": "node scripts/test.js --env=jsdom --coverage --collectCoverageFrom=src/components/**/*.js",
     "prettier": "node_modules/.bin/prettier --write src/**/*.js",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "precommit": "lint-staged"
   },
   "lint-staged": {
