@@ -1,28 +1,12 @@
-import React from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import './assets/sass/react-swift-slider.css';
 
 import Slide from './Slide';
 import Control from './Control';
 import Dot from './Dot';
 
-export default class Slider extends React.Component {
-  static propTypes = {
-    data: React.PropTypes.array.isRequired,
-    height: React.PropTypes.number,
-    interval: React.PropTypes.number,
-    activeDotColor: React.PropTypes.string,
-    dotColor: React.PropTypes.string,
-    showDots: React.PropTypes.bool,
-    enableNextAndPrev: React.PropTypes.bool
-  };
-  static defaultProps = {
-    height: 450,
-    activeDotColor: '#e8784e',
-    interval: 5000,
-    dotColor: '#909192',
-    showDots: true,
-    enableNextAndPrev: true
-  };
+export default class Slider extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -68,8 +52,8 @@ export default class Slider extends React.Component {
   render(){
     const { data, height, activeDotColor, dotColor, showDots, enableNextAndPrev } = this.props;
     return(
-      <div className={css(styles.container)}>
-        <ul className={css(styles.slides)} style={{height: height}}>
+      <div className='container'>
+        <ul className='slides' style={{height: height}}>
           {data.map((item, i) =>
             <Slide active={i === this.state.currentSlide}
               src={item.src}
@@ -77,7 +61,7 @@ export default class Slider extends React.Component {
           )}
         </ul>
         {showDots ?
-        <ul className={css(styles.dots)} >
+        <ul className='dots' >
           {data.map((item, i) =>
             <Dot
               activeDotColor={activeDotColor}
@@ -101,36 +85,21 @@ export default class Slider extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    position: 'relative',
-    height: '450px',
-    '@media (max-width: 600px)': {
-      height: '250px',
-    }
-  },
-  row: {
-    display: 'flex',
-    flexDirection: 'row'
-  },
-  slides: {
-    position: 'relative',
-    padding: '0px',
-    margin: '0px',
-    listStyle: 'none',
-    '@media (max-width: 600px)': {
-      height: '250px',
-    }
-  },
-  dots: {
-    listStyle: 'none',
-    margin: '1.7rem 0',
-    padding: 0,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    '@media (max-width: 600px)': {
-      margin: '1rem 0',
-    }
-  }
-})
+Slider.propTypes = {
+  data: PropTypes.array.isRequired,
+  height: PropTypes.number,
+  interval: PropTypes.number,
+  activeDotColor: PropTypes.string,
+  dotColor: PropTypes.string,
+  showDots: PropTypes.bool,
+  enableNextAndPrev: PropTypes.bool
+};
+
+Slider.defaultProps = {
+  height: 450,
+  activeDotColor: '#e8784e',
+  interval: 5000,
+  dotColor: '#909192',
+  showDots: true,
+  enableNextAndPrev: true
+};
