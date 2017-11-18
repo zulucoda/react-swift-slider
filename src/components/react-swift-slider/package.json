@@ -1,5 +1,5 @@
 {
   "private": true,
   "name": "react-swift-slider",
-  "main": "./index.js"
+  "main": "./Slider.js"
 }

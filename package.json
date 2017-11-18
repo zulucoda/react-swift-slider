@@ -2,7 +2,8 @@
   "name": "react-16-swift-slider",
   "version": "2.0.0",
   "description": "React Swift Slider",
-  "private": true,
+  "private": false,
+  "main": "lib/react-swift-slider/Slider.js",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
