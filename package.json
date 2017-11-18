@@ -48,7 +48,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "lib": "babel src/components --out-dir lib --copy-files",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom --coverage --collectCoverageFrom=src/components/**/*.js"
   },
   "keywords": [
     "react",
