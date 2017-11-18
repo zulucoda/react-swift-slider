@@ -48,7 +48,14 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "lib": "babel src/components --out-dir lib --copy-files",
-    "test": "node scripts/test.js --env=jsdom --coverage --collectCoverageFrom=src/components/**/*.js"
+    "test": "node scripts/test.js --env=jsdom --coverage --collectCoverageFrom=src/components/**/*.js",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "node_modules/.bin/prettier --write",
+      "git add"
+    ]
   },
   "keywords": [
     "react",
@@ -117,6 +124,9 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.0"
+    "enzyme-adapter-react-16": "^1.1.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "prettier": "1.8.2"
   }
 }
