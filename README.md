@@ -1,4 +1,7 @@
 ## React SwiftSlider
+[![npm status](https://img.shields.io/npm/v/react-swift-slider.svg)](https://www.npmjs.com/package/react-swift-slider)
+[![Build Status](https://travis-ci.org/zulucoda/react-swift-slider.svg?branch=master)](https://travis-ci.org/zulucoda/react-swift-slider)
+[![Coverage Status](https://coveralls.io/repos/github/zulucoda/react-swift-slider/badge.svg?branch=master)](https://coveralls.io/github/zulucoda/react-swift-slider?branch=master)
 
 React Slider Component
 
