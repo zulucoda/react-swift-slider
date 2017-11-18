@@ -1,13 +1,18 @@
-## React SwiftSlider
+# React Swift Slider
 [![npm status](https://img.shields.io/npm/v/react-swift-slider.svg)](https://www.npmjs.com/package/react-swift-slider)
 [![Build Status](https://travis-ci.org/zulucoda/react-swift-slider.svg?branch=master)](https://travis-ci.org/zulucoda/react-swift-slider)
 [![Coverage Status](https://coveralls.io/repos/github/zulucoda/react-swift-slider/badge.svg?branch=master)](https://coveralls.io/github/zulucoda/react-swift-slider?branch=master)
 
 React Slider Component
 
+## Demo
 
 [Demo](http://ill-informed-position.surge.sh/)
 
+
+
+## Example Repo on how to use `react-swift-slider`
+[https://github.com/zulucoda/react-swift-slider-test](https://github.com/zulucoda/react-swift-slider-test)
 
 
 ```
