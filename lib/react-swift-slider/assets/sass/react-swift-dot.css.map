@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAK;EACH,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,MAAM;EACd,aAAa,EAAE,IAAI;EACnB,MAAM,EAAE,MAAM;EACd,MAAM,EAAE,OAAO",
+"sources": ["react-swift-dot.scss"],
+"names": [],
+"file": "react-swift-dot.css"
+}
