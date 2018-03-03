@@ -3,22 +3,27 @@
 [![Build Status](https://travis-ci.org/zulucoda/react-swift-slider.svg?branch=master)](https://travis-ci.org/zulucoda/react-swift-slider)
 [![Coverage Status](https://coveralls.io/repos/github/zulucoda/react-swift-slider/badge.svg?branch=master)](https://coveralls.io/github/zulucoda/react-swift-slider?branch=master)
 
-React Slider Component
+React Swift Slider is a simple image/picture slider for react.
+
+![example](react-swift-slider-test.gif)
 
 ## Demo
 
-[Demo](http://ill-informed-position.surge.sh/)
+[Demo-1](https://react-swift-slider.mfbproject.co.za/)
+[Demo-2](http://ill-informed-position.surge.sh/)
 
 
 
 ## Example Repo on how to use `react-swift-slider`
 [https://github.com/zulucoda/react-swift-slider-test](https://github.com/zulucoda/react-swift-slider-test)
 
+## Installation
 
 ```
 npm i react-swift-slider
 ```
 
+## Usage
 
 ```javascript
 import SwiftSlider from 'react-swift-slider'
@@ -98,7 +103,7 @@ class App extends Component {
 
 ### Hide/Show Previous and Next controls
 These controls allow the user to go *next* or *previous*, they located on the *left* and *right* side of the image.
-By default these are available. To hide these just set enableNextAndPrev to false
+By default, these are available. To hide this just set enableNextAndPrev to false
 
 ```javascript
 const data =  [
