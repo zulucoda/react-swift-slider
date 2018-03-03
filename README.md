@@ -5,7 +5,7 @@
 
 React Swift Slider is a simple image/picture slider for react.
 
-[![react-swift-slider-example](react-swift-slider-test.gif)](https://react-swift-slider.mfbproject.co.za/)
+[![react-swift-slider-example](react-swift-slider-example.gif)](https://react-swift-slider.mfbproject.co.za/)
 
 ## Demo
 
