@@ -21,7 +21,7 @@
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-    "up-version": "npm version minor --force --message \"[ci skip] up version for release\"",
+    "up-version": "npm version major --force --message \"[ci skip] up version for release\"",
     "precommit": "lint-staged"
   },
   "lint-staged": {

@@ -10,7 +10,6 @@ React Swift Slider is a simple image/picture slider for react.
 ## Demo
 
 [Demo-1](https://react-swift-slider.mfbproject.co.za/)
-[Demo-2](http://ill-informed-position.surge.sh/)
 
 
 
@@ -31,11 +30,11 @@ import SwiftSlider from 'react-swift-slider'
 
 ```javascript
 const data =  [
-  {'id':'1','src':'https://picjumbo.imgix.net/HNCK9192.jpg?q=40&w=1650&sharp=30'},
-  {'id':'2','src':'https://picjumbo.imgix.net/HNCK3313.jpg?q=40&w=1650&sharp=30'},
-  {'id':'3','src':'https://picjumbo.imgix.net/HNCK4330.jpg?q=40&w=1650&sharp=30'},
-  {'id':'4','src':'https://picjumbo.imgix.net/HNCK0180.jpg?q=40&w=1650&sharp=30'},
-  {'id':'5','src':'https://picjumbo.imgix.net/HNCK3286.jpg?q=40&w=1650&sharp=30'}
+  {'id':'1','src':'https://media.mfbproject.co.za/repos/2017_alfa-romeo_stelvio_leaked_02.jpg'},
+  {'id':'2','src':'https://media.mfbproject.co.za/repos/2017_alfa_romeo_stelvioquadrifoglio_official_09.jpg'},
+  {'id':'3','src':'https://media.mfbproject.co.za/repos/2018-alfa-romeo-stelvio-quadrifoglio-specs-photos-speed-2.jpg'},
+  {'id':'4','src':'https://media.mfbproject.co.za/repos/alfa-romeo-giulia-quadrifoglio-2017-us-wallpapers-and-hd-images-13.jpg'},
+  {'id':'5','src':'https://media.mfbproject.co.za/repos/ARWP_Infra_Desk_1920_1080_Quad.png'}
 ];
 
 class App extends Component {
@@ -63,11 +62,11 @@ class App extends Component {
 This will render swift slide with 900px height. The default height is 450px.
 ```javascript
 const data =  [
-  {'id':'1','src':'https://picjumbo.imgix.net/HNCK9192.jpg?q=40&w=1650&sharp=30'},
-  {'id':'2','src':'https://picjumbo.imgix.net/HNCK3313.jpg?q=40&w=1650&sharp=30'},
-  {'id':'3','src':'https://picjumbo.imgix.net/HNCK4330.jpg?q=40&w=1650&sharp=30'},
-  {'id':'4','src':'https://picjumbo.imgix.net/HNCK0180.jpg?q=40&w=1650&sharp=30'},
-  {'id':'5','src':'https://picjumbo.imgix.net/HNCK3286.jpg?q=40&w=1650&sharp=30'}
+  {'id':'1','src':'https://media.mfbproject.co.za/repos/2017_alfa-romeo_stelvio_leaked_02.jpg'},
+  {'id':'2','src':'https://media.mfbproject.co.za/repos/2017_alfa_romeo_stelvioquadrifoglio_official_09.jpg'},
+  {'id':'3','src':'https://media.mfbproject.co.za/repos/2018-alfa-romeo-stelvio-quadrifoglio-specs-photos-speed-2.jpg'},
+  {'id':'4','src':'https://media.mfbproject.co.za/repos/alfa-romeo-giulia-quadrifoglio-2017-us-wallpapers-and-hd-images-13.jpg'},
+  {'id':'5','src':'https://media.mfbproject.co.za/repos/ARWP_Infra_Desk_1920_1080_Quad.png'}
 ];
 
 class App extends Component {
@@ -80,16 +79,16 @@ class App extends Component {
 ```
 
 ### Hide/Show Dots
-These dots allow the user to change the image, by default they displayed.
+These dots allow the user to change the image, by default the dots are displayed.
 To hide these dots just set showDots to false.
 
 ```javascript
 const data =  [
-  {'id':'1','src':'https://picjumbo.imgix.net/HNCK9192.jpg?q=40&w=1650&sharp=30'},
-  {'id':'2','src':'https://picjumbo.imgix.net/HNCK3313.jpg?q=40&w=1650&sharp=30'},
-  {'id':'3','src':'https://picjumbo.imgix.net/HNCK4330.jpg?q=40&w=1650&sharp=30'},
-  {'id':'4','src':'https://picjumbo.imgix.net/HNCK0180.jpg?q=40&w=1650&sharp=30'},
-  {'id':'5','src':'https://picjumbo.imgix.net/HNCK3286.jpg?q=40&w=1650&sharp=30'}
+  {'id':'1','src':'https://media.mfbproject.co.za/repos/2017_alfa-romeo_stelvio_leaked_02.jpg'},
+  {'id':'2','src':'https://media.mfbproject.co.za/repos/2017_alfa_romeo_stelvioquadrifoglio_official_09.jpg'},
+  {'id':'3','src':'https://media.mfbproject.co.za/repos/2018-alfa-romeo-stelvio-quadrifoglio-specs-photos-speed-2.jpg'},
+  {'id':'4','src':'https://media.mfbproject.co.za/repos/alfa-romeo-giulia-quadrifoglio-2017-us-wallpapers-and-hd-images-13.jpg'},
+  {'id':'5','src':'https://media.mfbproject.co.za/repos/ARWP_Infra_Desk_1920_1080_Quad.png'}
 ];
 
 class App extends Component {
@@ -102,16 +101,16 @@ class App extends Component {
 ```
 
 ### Hide/Show Previous and Next controls
-These controls allow the user to go *next* or *previous*, they located on the *left* and *right* side of the image.
-By default, these are available. To hide this just set enableNextAndPrev to false
+These controls allow the user to go *next* or *previous*, the controls are located on the *left* and *right* side of the image.
+By default, these controls are available. To hide these controls just set enableNextAndPrev to false.
 
 ```javascript
 const data =  [
-  {'id':'1','src':'https://picjumbo.imgix.net/HNCK9192.jpg?q=40&w=1650&sharp=30'},
-  {'id':'2','src':'https://picjumbo.imgix.net/HNCK3313.jpg?q=40&w=1650&sharp=30'},
-  {'id':'3','src':'https://picjumbo.imgix.net/HNCK4330.jpg?q=40&w=1650&sharp=30'},
-  {'id':'4','src':'https://picjumbo.imgix.net/HNCK0180.jpg?q=40&w=1650&sharp=30'},
-  {'id':'5','src':'https://picjumbo.imgix.net/HNCK3286.jpg?q=40&w=1650&sharp=30'}
+  {'id':'1','src':'https://media.mfbproject.co.za/repos/2017_alfa-romeo_stelvio_leaked_02.jpg'},
+  {'id':'2','src':'https://media.mfbproject.co.za/repos/2017_alfa_romeo_stelvioquadrifoglio_official_09.jpg'},
+  {'id':'3','src':'https://media.mfbproject.co.za/repos/2018-alfa-romeo-stelvio-quadrifoglio-specs-photos-speed-2.jpg'},
+  {'id':'4','src':'https://media.mfbproject.co.za/repos/alfa-romeo-giulia-quadrifoglio-2017-us-wallpapers-and-hd-images-13.jpg'},
+  {'id':'5','src':'https://media.mfbproject.co.za/repos/ARWP_Infra_Desk_1920_1080_Quad.png'}
 ];
 
 class App extends Component {
@@ -122,3 +121,20 @@ class App extends Component {
   }
 }
 ```
+
+
+### CSS Settings
+
+| Name | Component | Description |
+| :------| :-----------| :-----------|
+| swift-slider-container   | Slider | Container element for react-swift-slider |
+| swift-slider-slides  | Slides | List of slides |
+| swift-slider-dots   | Dots | List of dots |
+| swift-slider-prev   | Control | Control to navigate to the previous slide  |
+| swift-slider-next  | Control | Control to navigate to the next slide  |
+| swift-slider-slide  | Slide | A slide with a background image set |
+| swift-slider-active  | Slide | Sets the current active slide |
+| swift-slider-dot  | Dot | A dot with set with the default colour |
+
+### License
+MIT License.
