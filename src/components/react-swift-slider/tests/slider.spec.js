@@ -38,7 +38,7 @@ describe("Slider - Unit Test", () => {
 
   it("should render slider", () => {
     const wrapper = shallow(<Slider data={data} />);
-    expect(wrapper.find(".container").length).toEqual(1);
+    expect(wrapper.find(".swift-slider-container").length).toEqual(1);
     expect(wrapper.find(".slides").length).toEqual(1);
   });
 

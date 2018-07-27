@@ -59,7 +59,7 @@ export default class Slider extends Component {
       enableNextAndPrev
     } = this.props;
     return (
-      <div className="container">
+      <div className="swift-slider-container">
         <ul className="slides" style={{ height: height }}>
           {data.map((item, i) => (
             <Slide
