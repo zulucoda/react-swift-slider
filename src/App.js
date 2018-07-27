@@ -60,7 +60,7 @@ class App extends Component {
         <Slider
           data={data}
           height={680}
-          showDots={false}
+          showDots={true}
           enableNextAndPrev={false}
         />
       </div>
