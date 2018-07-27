@@ -16,7 +16,7 @@ describe("Control - Unit Test", () => {
       );
       expect(
         wrapper.contains(
-          <div className={DIRECTION.prev} onClick={onPressPrev} />
+          <div className="swift-slider-prev" onClick={onPressPrev} />
         )
       ).toBeTruthy();
     });
@@ -30,7 +30,7 @@ describe("Control - Unit Test", () => {
       );
       expect(
         wrapper.contains(
-          <div className={DIRECTION.next} onClick={onNextPrev} />
+          <div className="swift-slider-next" onClick={onNextPrev} />
         )
       ).toBeTruthy();
     });

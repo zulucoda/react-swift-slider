@@ -20,7 +20,9 @@ describe("Dot - Unit Test", () => {
       />
     );
 
-    expect(wrapper.find("li").getElement().props.className).toEqual("dot");
+    expect(wrapper.find("li").getElement().props.className).toEqual(
+      "swift-slider-dot"
+    );
     expect(wrapper.find("li").getElement().props.style.background).toEqual(
       "dot color"
     );

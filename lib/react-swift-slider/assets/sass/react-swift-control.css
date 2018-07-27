@@ -1,4 +1,4 @@
-.prev {
+.swift-slider-prev {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -12,7 +12,7 @@
   width: 30%;
   cursor: pointer; }
 
-.next {
+.swift-slider-next {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -25,5 +25,3 @@
   padding: 0 2rem;
   width: 30%;
   cursor: pointer; }
-
-/*# sourceMappingURL=react-swift-control.css.map */

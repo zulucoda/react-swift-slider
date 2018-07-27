@@ -6,7 +6,7 @@ const Dot = ({ active, onClick, idx, activeDotColor, dotColor }) => {
     <li
       onClick={() => onClick(idx)}
       style={{ background: active ? activeDotColor : dotColor }}
-      className="dot"
+      className="swift-slider-dot"
     />
   );
 };

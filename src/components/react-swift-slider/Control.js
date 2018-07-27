@@ -7,9 +7,9 @@ export const DIRECTION = {
 
 const Control = ({ onPressNext, onPressPrev, direction }) => {
   if (direction === DIRECTION.prev) {
-    return <div className="prev" onClick={onPressPrev} />;
+    return <div className="swift-slider-prev" onClick={onPressPrev} />;
   } else {
-    return <div className="next" onClick={onPressNext} />;
+    return <div className="swift-slider-next" onClick={onPressNext} />;
   }
 };
 

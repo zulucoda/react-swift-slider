@@ -59,8 +59,8 @@ export default class Slider extends Component {
       enableNextAndPrev
     } = this.props;
     return (
-      <div className="container">
-        <ul className="slides" style={{ height: height }}>
+      <div className="swift-slider-container">
+        <ul className="swift-slider-slides" style={{ height: height }}>
           {data.map((item, i) => (
             <Slide
               active={i === this.state.currentSlide}
@@ -70,7 +70,7 @@ export default class Slider extends Component {
           ))}
         </ul>
         {showDots ? (
-          <ul className="dots">
+          <ul className="swift-slider-dots">
             {data.map((item, i) => (
               <Dot
                 activeDotColor={activeDotColor}

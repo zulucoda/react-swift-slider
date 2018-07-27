@@ -1,32 +1,28 @@
-.container {
+.swift-slider-container {
   position: relative;
   height: 450px; }
   @media (max-width: 600px) {
-    .container {
+    .swift-slider-container {
       height: 250px; } }
+  .swift-slider-container .swift-slider-slides {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    @media (max-width: 600px) {
+      .swift-slider-container .swift-slider-slides {
+        height: 250px; } }
+  .swift-slider-container .swift-slider-dots {
+    list-style: none;
+    margin: 1.7rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    @media (max-width: 600px) {
+      .swift-slider-container .swift-slider-dots {
+        margin: 1rem 0; } }
 
 .row {
   display: flex;
   flex-direction: row; }
-
-.slides {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-  @media (max-width: 600px) {
-    .slides {
-      height: 250px; } }
-
-.dots {
-  list-style: none;
-  margin: 1.7rem 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-  @media (max-width: 600px) {
-    .dots {
-      margin: 1rem 0; } }
-
-/*# sourceMappingURL=react-swift-slider.css.map */
