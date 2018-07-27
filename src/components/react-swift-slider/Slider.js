@@ -60,7 +60,7 @@ export default class Slider extends Component {
     } = this.props;
     return (
       <div className="swift-slider-container">
-        <ul className="slides" style={{ height: height }}>
+        <ul className="swift-slider-slides" style={{ height: height }}>
           {data.map((item, i) => (
             <Slide
               active={i === this.state.currentSlide}

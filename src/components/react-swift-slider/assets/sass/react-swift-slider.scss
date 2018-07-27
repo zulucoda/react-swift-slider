@@ -4,6 +4,15 @@
   @media (max-width: 600px) {
     height: 250px;
   }
+  .swift-slider-slides {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    @media (max-width: 600px) {
+      height: 250px;
+    }
+  }
 }
 
 .row {
@@ -11,15 +20,6 @@
   flex-direction: row
 }
 
-.slides {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  @media (max-width: 600px) {
-    height: 250px;
-  }
-}
 
 .dots {
   list-style: none;

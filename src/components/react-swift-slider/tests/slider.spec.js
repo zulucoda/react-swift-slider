@@ -39,7 +39,7 @@ describe("Slider - Unit Test", () => {
   it("should render slider", () => {
     const wrapper = shallow(<Slider data={data} />);
     expect(wrapper.find(".swift-slider-container").length).toEqual(1);
-    expect(wrapper.find(".slides").length).toEqual(1);
+    expect(wrapper.find(".swift-slider-slides").length).toEqual(1);
   });
 
   it("should go to position 4 when on the first slide when clicking on next", () => {

@@ -4,19 +4,18 @@
   @media (max-width: 600px) {
     .swift-slider-container {
       height: 250px; } }
+  .swift-slider-container .swift-slider-slides {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    @media (max-width: 600px) {
+      .swift-slider-container .swift-slider-slides {
+        height: 250px; } }
 
 .row {
   display: flex;
   flex-direction: row; }
-
-.slides {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-  @media (max-width: 600px) {
-    .slides {
-      height: 250px; } }
 
 .dots {
   list-style: none;
