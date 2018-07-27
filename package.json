@@ -14,7 +14,7 @@
     "start-js": "node scripts/start.js",
     "build-js": "node scripts/build.js",
     "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && build-js",
+    "build": "npm-run-all -p build-css build-js",
     "lib": "babel src/components --out-dir lib --copy-files && rm -rf lib/react-swift-slider/tests",
     "test": "node scripts/test.js --env=jsdom --coverage --collectCoverageFrom=src/components/**/*.js",
     "prettier": "node_modules/.bin/prettier --write src/**/*.js",
