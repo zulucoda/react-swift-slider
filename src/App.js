@@ -61,7 +61,7 @@ class App extends Component {
           data={data}
           height={680}
           showDots={true}
-          enableNextAndPrev={false}
+          enableNextAndPrev={true}
         />
       </div>
     );
