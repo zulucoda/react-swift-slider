@@ -1,6 +1,6 @@
 {
   "name": "react-swift-slider",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "React Swift Slider",
   "private": false,
   "main": "lib/react-swift-slider/Slider.js",
@@ -21,6 +21,7 @@
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "up-version": "npm version minor --force --message \"[ci skip] up version for release\"",
     "precommit": "lint-staged"
   },
   "lint-staged": {
