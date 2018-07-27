@@ -70,7 +70,7 @@ export default class Slider extends Component {
           ))}
         </ul>
         {showDots ? (
-          <ul className="dots">
+          <ul className="swift-slider-dots">
             {data.map((item, i) => (
               <Dot
                 activeDotColor={activeDotColor}

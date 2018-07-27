@@ -85,12 +85,12 @@ describe("Slider - Unit Test", () => {
 
   it("should not show dots", () => {
     const wrapper = shallow(<Slider data={data} showDots={false} />);
-    expect(wrapper.find(".dots").length).toEqual(0);
+    expect(wrapper.find(".swift-slider-dots").length).toEqual(0);
   });
 
   it("should not show dots", () => {
     const wrapper = shallow(<Slider data={data} showDots={false} />);
-    expect(wrapper.find(".dots").length).toEqual(0);
+    expect(wrapper.find(".swift-slider-dots").length).toEqual(0);
   });
 
   it("should not show next and previous", () => {
