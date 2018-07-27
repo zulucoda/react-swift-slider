@@ -45,31 +45,31 @@ describe("Slider - Unit Test", () => {
   it("should go to position 4 when on the first slide when clicking on next", () => {
     const wrapper = mount(<Slider data={data} />);
     expect(wrapper.state().currentSlide).toEqual(0);
-    wrapper.find("div.prev").simulate("click");
+    wrapper.find("div.swift-slider-prev").simulate("click");
     expect(wrapper.state().currentSlide).toEqual(4);
   });
 
   it("should go to previous slide", () => {
     const wrapper = mount(<Slider data={data} />);
-    wrapper.find("div.prev").simulate("click");
+    wrapper.find("div.swift-slider-prev").simulate("click");
     expect(wrapper.state().currentSlide).toEqual(4);
-    wrapper.find("div.prev").simulate("click");
+    wrapper.find("div.swift-slider-prev").simulate("click");
     expect(wrapper.state().currentSlide).toEqual(3);
   });
 
   it("should go to next slide", () => {
     const wrapper = mount(<Slider data={data} />);
     expect(wrapper.state().currentSlide).toEqual(0);
-    wrapper.find("div.next").simulate("click");
+    wrapper.find("div.swift-slider-next").simulate("click");
     expect(wrapper.state().currentSlide).toEqual(1);
   });
 
   it("should go to position 0 when on the last slide when clicking on next", () => {
     const wrapper = mount(<Slider data={[data[0], data[1]]} />);
     expect(wrapper.state().currentSlide).toEqual(0);
-    wrapper.find("div.next").simulate("click");
+    wrapper.find("div.swift-slider-next").simulate("click");
     expect(wrapper.state().currentSlide).toEqual(1);
-    wrapper.find("div.next").simulate("click");
+    wrapper.find("div.swift-slider-next").simulate("click");
     expect(wrapper.state().currentSlide).toEqual(0);
   });
 
