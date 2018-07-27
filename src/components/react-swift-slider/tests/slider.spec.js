@@ -77,7 +77,7 @@ describe("Slider - Unit Test", () => {
     const wrapper = mount(<Slider data={data} />);
     expect(wrapper.state().currentSlide).toEqual(0);
     wrapper
-      .find("li.dot")
+      .find("li.swift-slider-dot")
       .at(3)
       .simulate("click");
     expect(wrapper.state().currentSlide).toEqual(3);
