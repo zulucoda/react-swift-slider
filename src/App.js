@@ -8,23 +8,43 @@ class App extends Component {
     const data = [
       {
         id: "1",
-        src: "https://picjumbo.imgix.net/HNCK9192.jpg?q=40&w=1650&sharp=30"
+        src:
+          "https://media.mfbproject.co.za/repos/2017_alfa-romeo_stelvio_leaked_02.jpg"
       },
       {
         id: "2",
-        src: "https://picjumbo.imgix.net/HNCK3313.jpg?q=40&w=1650&sharp=30"
+        src:
+          "https://media.mfbproject.co.za/repos/2017_alfa_romeo_stelvioquadrifoglio_official_09.jpg"
       },
       {
         id: "3",
-        src: "https://picjumbo.imgix.net/HNCK4330.jpg?q=40&w=1650&sharp=30"
+        src:
+          "https://media.mfbproject.co.za/repos/2018-alfa-romeo-stelvio-quadrifoglio-specs-photos-speed-2.jpg"
       },
       {
         id: "4",
-        src: "https://picjumbo.imgix.net/HNCK0180.jpg?q=40&w=1650&sharp=30"
+        src:
+          "https://media.mfbproject.co.za/repos/alfa-romeo-giulia-quadrifoglio-2017-us-wallpapers-and-hd-images-13.jpg"
       },
       {
         id: "5",
-        src: "https://picjumbo.imgix.net/HNCK3286.jpg?q=40&w=1650&sharp=30"
+        src:
+          "https://media.mfbproject.co.za/repos/ARWP_Infra_Desk_1920_1080_Quad.png"
+      },
+      {
+        id: "6",
+        src:
+          "https://media.mfbproject.co.za/repos/ARWP_RearRunning_Desk_1920_1080_Hero.png"
+      },
+      {
+        id: "7",
+        src:
+          "https://media.mfbproject.co.za/repos/ARWP_Running_Desk_1920_1080_Engine.png"
+      },
+      {
+        id: "8",
+        src:
+          "https://media.mfbproject.co.za/repos/ARWP_Rear34Run_Desk_1920_1080_Hero.png"
       }
     ];
     return (
