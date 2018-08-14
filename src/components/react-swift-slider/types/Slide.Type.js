@@ -10,3 +10,8 @@ export type Slide = {|
   id: string,
   src: string
 |};
+
+export type SlideProps = {|
+  src: string,
+  active: boolean
+|};

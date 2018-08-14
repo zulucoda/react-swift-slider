@@ -1,8 +1,12 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+// @flow
+
+import * as React from "react";
+import type { SlideProps } from "./types/Slide.Type";
 import "./assets/sass/react-swift-slide.css";
 
-class Slide extends Component {
+type Props = SlideProps;
+
+export default class Slide extends React.Component<Props> {
   render() {
     const { src, active } = this.props;
     const selectedClass = active
@@ -16,10 +20,3 @@ class Slide extends Component {
     );
   }
 }
-
-Slide.propTypes = {
-  src: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired
-};
-
-export default Slide;
