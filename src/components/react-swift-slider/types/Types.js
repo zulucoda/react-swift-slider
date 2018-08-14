@@ -6,12 +6,7 @@
  * Copyright zulucoda - mfbproject
  */
 
-export type Slide = {|
-  id: string,
-  src: string
-|};
-
-export type SlideProps = {|
-  src: string,
-  active: boolean
-|};
+export type Src = string;
+export type Active = boolean;
+export type ActiveDotColor = string;
+export type DotColor = string;

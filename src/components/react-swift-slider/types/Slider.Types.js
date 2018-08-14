@@ -5,14 +5,15 @@
  * Copyright zulucoda - mfbproject
  */
 
-import type { Slide } from "./Slide.Type";
+import type { ActiveDotColor, DotColor } from "./Types";
+import type { Slide } from "./Slide.Types";
 
 export type SliderProps = {|
   data: Array<Slide>,
   height: number,
-  activeDotColor: string,
+  activeDotColor: ActiveDotColor,
   interval: number,
-  dotColor: string,
+  dotColor: DotColor,
   showDots: boolean,
   enableNextAndPrev: boolean
 |};
