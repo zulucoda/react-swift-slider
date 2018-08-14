@@ -6,8 +6,10 @@
  * Copyright zulucoda - mfbproject
  */
 
-export type Src = string;
-export type Active = boolean;
-export type ActiveDotColor = string;
-export type DotColor = string;
-export type Direction = "prev" | "next";
+import type { Direction } from "./Types";
+
+export type ControlProps = {|
+  onPressNext?: Function,
+  onPressPrev?: Function,
+  direction: Direction
+|};

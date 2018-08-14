@@ -1,4 +1,5 @@
 // @flow
+
 import * as React from "react";
 import type { DotProps } from "./types/Dot.Types";
 import "./assets/sass/react-swift-dot.css";
