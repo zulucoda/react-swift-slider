@@ -12,6 +12,7 @@ type State = SliderState;
 
 export default class Slider extends React.Component<Props, State> {
   static defaultProps = {
+    data: [],
     height: 450,
     activeDotColor: "#e8784e",
     interval: 5000,
