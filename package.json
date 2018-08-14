@@ -23,6 +23,7 @@
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "up-version": "npm version major --force --message \"[ci skip] up version for release\"",
     "flow": "flow",
+    "flow-test": "npm-run-all -p flow test",
     "precommit": "lint-staged",
     "prepublish": "npm run build"
   },
