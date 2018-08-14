@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import "./assets/sass/react-swift-slider.css";
+import PropTypes from "prop-types";
 import type { SliderProps, SliderState } from "./types/Slider.Types";
 import Slide from "./Slide";
 import Control, { DIRECTION } from "./Control";
@@ -121,3 +122,13 @@ export default class Slider extends React.Component<Props, State> {
     );
   }
 }
+
+Slider.propTypes = {
+  data: PropTypes.array.isRequired,
+  height: PropTypes.number,
+  interval: PropTypes.number,
+  activeDotColor: PropTypes.string,
+  dotColor: PropTypes.string,
+  showDots: PropTypes.bool,
+  enableNextAndPrev: PropTypes.bool
+};
