@@ -1,23 +1,44 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import "./assets/sass/react-swift-slider.css";
+// @flow
 
+import * as React from "react";
+import "./assets/sass/react-swift-slider.css";
+import PropTypes from "prop-types";
+import type { SliderProps, SliderState } from "./types/Slider.Types";
 import Slide from "./Slide";
-import Control from "./Control";
+import Control, { DIRECTION } from "./Control";
 import Dot from "./Dot";
 
-export default class Slider extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentSlide: 0
-    };
-    this.slideInterval = setInterval(this.nextSlide, this.props.interval);
-  }
-  resetInterval = () => {
-    clearInterval(this.slideInterval);
-    this.slideInterval = setInterval(this.nextSlide, this.props.interval);
+type Props = SliderProps;
+type State = SliderState;
+
+export default class Slider extends React.Component<Props, State> {
+  static defaultProps = {
+    data: [],
+    height: 450,
+    activeDotColor: "#e8784e",
+    interval: 5000,
+    dotColor: "#909192",
+    showDots: true,
+    enableNextAndPrev: true
   };
+
+  state: State = {
+    currentSlide: 0
+  };
+
+  componentDidMount() {
+    this.setState({
+      slideInterval: setInterval(this.nextSlide, this.props.interval)
+    });
+  }
+
+  resetInterval = () => {
+    clearInterval(this.state.slideInterval);
+    this.setState({
+      slideInterval: setInterval(this.nextSlide, this.props.interval)
+    });
+  };
+
   nextSlide = () => {
     if (this.state.currentSlide === this.props.data.length - 1) {
       this.setState({
@@ -43,12 +64,14 @@ export default class Slider extends Component {
     });
     this.resetInterval();
   };
-  goToSlide = idx => {
+
+  goToSlide = (idx: number) => {
     this.setState({
       currentSlide: idx
     });
     this.resetInterval();
   };
+
   render() {
     const {
       data,
@@ -86,12 +109,12 @@ export default class Slider extends Component {
           ""
         )}
         {enableNextAndPrev ? (
-          <Control onPressPrev={this.prevSlide} direction="prev" />
+          <Control onPressPrev={this.prevSlide} direction={DIRECTION.prev} />
         ) : (
           ""
         )}
         {enableNextAndPrev ? (
-          <Control onPressNext={this.nextSlide} direction="next" />
+          <Control onPressNext={this.nextSlide} direction={DIRECTION.next} />
         ) : (
           ""
         )}
@@ -108,13 +131,4 @@ Slider.propTypes = {
   dotColor: PropTypes.string,
   showDots: PropTypes.bool,
   enableNextAndPrev: PropTypes.bool
-};
-
-Slider.defaultProps = {
-  height: 450,
-  activeDotColor: "#e8784e",
-  interval: 5000,
-  dotColor: "#909192",
-  showDots: true,
-  enableNextAndPrev: true
 };

@@ -7,6 +7,7 @@ import React from "react";
 import { shallow, mount } from "enzyme";
 import Slider from "../Slider";
 import { JSDOM } from "jsdom";
+import Slide from "../Slide";
 
 const { document } = new JSDOM("").window;
 global.document = document;
@@ -40,6 +41,10 @@ describe("Slider - Unit Test", () => {
     const wrapper = shallow(<Slider data={data} />);
     expect(wrapper.find(".swift-slider-container").length).toEqual(1);
     expect(wrapper.find(".swift-slider-slides").length).toEqual(1);
+  });
+
+  it("should NOT crash when rendered without data being set", () => {
+    shallow(<Slider />);
   });
 
   it("should go to position 4 when on the first slide when clicking on next", () => {
