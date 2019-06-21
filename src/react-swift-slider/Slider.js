@@ -1,53 +1,46 @@
-// @flow
+import React from 'react';
+import PropTypes from 'prop-types';
+import Slide from './Slide';
+import Control, { DIRECTION } from './Control';
+import Dot from './Dot';
 
-import * as React from "react";
-import "./assets/sass/react-swift-slider.css";
-import PropTypes from "prop-types";
-import type { SliderProps, SliderState } from "./types/Slider.Types";
-import Slide from "./Slide";
-import Control, { DIRECTION } from "./Control";
-import Dot from "./Dot";
-
-type Props = SliderProps;
-type State = SliderState;
-
-export default class Slider extends React.Component<Props, State> {
+export default class Slider extends React.Component {
   static defaultProps = {
     data: [],
     height: 450,
-    activeDotColor: "#e8784e",
+    activeDotColor: '#e8784e',
     interval: 5000,
-    dotColor: "#909192",
+    dotColor: '#909192',
     showDots: true,
-    enableNextAndPrev: true
+    enableNextAndPrev: true,
   };
 
   state: State = {
-    currentSlide: 0
+    currentSlide: 0,
   };
 
   componentDidMount() {
     this.setState({
-      slideInterval: setInterval(this.nextSlide, this.props.interval)
+      slideInterval: setInterval(this.nextSlide, this.props.interval),
     });
   }
 
   resetInterval = () => {
     clearInterval(this.state.slideInterval);
     this.setState({
-      slideInterval: setInterval(this.nextSlide, this.props.interval)
+      slideInterval: setInterval(this.nextSlide, this.props.interval),
     });
   };
 
   nextSlide = () => {
     if (this.state.currentSlide === this.props.data.length - 1) {
       this.setState({
-        currentSlide: 0
+        currentSlide: 0,
       });
       return;
     }
     this.setState({
-      currentSlide: this.state.currentSlide + 1
+      currentSlide: this.state.currentSlide + 1,
     });
     this.resetInterval();
   };
@@ -55,19 +48,19 @@ export default class Slider extends React.Component<Props, State> {
   prevSlide = () => {
     if (this.state.currentSlide === 0) {
       this.setState({
-        currentSlide: this.props.data.length - 1
+        currentSlide: this.props.data.length - 1,
       });
       return;
     }
     this.setState({
-      currentSlide: this.state.currentSlide - 1
+      currentSlide: this.state.currentSlide - 1,
     });
     this.resetInterval();
   };
 
   goToSlide = (idx: number) => {
     this.setState({
-      currentSlide: idx
+      currentSlide: idx,
     });
     this.resetInterval();
   };
@@ -79,7 +72,7 @@ export default class Slider extends React.Component<Props, State> {
       activeDotColor,
       dotColor,
       showDots,
-      enableNextAndPrev
+      enableNextAndPrev,
     } = this.props;
     return (
       <div className="swift-slider-container">
@@ -106,17 +99,17 @@ export default class Slider extends React.Component<Props, State> {
             ))}
           </ul>
         ) : (
-          ""
+          ''
         )}
         {enableNextAndPrev ? (
           <Control onPressPrev={this.prevSlide} direction={DIRECTION.prev} />
         ) : (
-          ""
+          ''
         )}
         {enableNextAndPrev ? (
           <Control onPressNext={this.nextSlide} direction={DIRECTION.next} />
         ) : (
-          ""
+          ''
         )}
       </div>
     );
@@ -130,5 +123,5 @@ Slider.propTypes = {
   activeDotColor: PropTypes.string,
   dotColor: PropTypes.string,
   showDots: PropTypes.bool,
-  enableNextAndPrev: PropTypes.bool
+  enableNextAndPrev: PropTypes.bool,
 };

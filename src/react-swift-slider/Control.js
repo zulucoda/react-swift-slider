@@ -1,17 +1,11 @@
-// @flow
-
-import * as React from "react";
-import type { ControlProps } from "./types/Control.Types";
-import "./assets/sass/react-swift-control.css";
+import React from 'react';
 
 export const DIRECTION = {
-  prev: "prev",
-  next: "next"
+  prev: 'prev',
+  next: 'next',
 };
 
-type Props = ControlProps;
-
-export default class Control extends React.Component<Props> {
+export default class Control extends React.Component {
   render() {
     const { onPressNext, onPressPrev, direction } = this.props;
     if (direction === DIRECTION.prev) {

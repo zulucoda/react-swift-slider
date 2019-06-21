@@ -3,12 +3,12 @@
  * Copyright mfbproject.co.za - muzi@mfbproject.co.za
  * Copyright zulucoda - mfbproject
  */
-import React from "react";
-import { shallow } from "enzyme";
-import Dot from "../Dot";
+import React from 'react';
+import { shallow } from 'enzyme';
+import Dot from '../Dot';
 
-describe("Dot - Unit Test", () => {
-  it("should render a non active dot", () => {
+describe('Dot - Unit Test', () => {
+  it('should render a non active dot', () => {
     const onClickFun = jest.fn();
     const wrapper = shallow(
       <Dot
@@ -17,18 +17,18 @@ describe("Dot - Unit Test", () => {
         active={false}
         onClick={onClickFun}
         idx="some index"
-      />
+      />,
     );
 
-    expect(wrapper.find("li").getElement().props.className).toEqual(
-      "swift-slider-dot"
+    expect(wrapper.find('li').getElement().props.className).toEqual(
+      'swift-slider-dot',
     );
-    expect(wrapper.find("li").getElement().props.style.background).toEqual(
-      "dot color"
+    expect(wrapper.find('li').getElement().props.style.background).toEqual(
+      'dot color',
     );
   });
 
-  it("should render a active dot", () => {
+  it('should render a active dot', () => {
     const onClickFun = jest.fn();
     const wrapper = shallow(
       <Dot
@@ -37,15 +37,15 @@ describe("Dot - Unit Test", () => {
         active={true}
         onClick={onClickFun}
         idx="some index"
-      />
+      />,
     );
 
-    expect(wrapper.find("li").getElement().props.style.background).toEqual(
-      "active dot color"
+    expect(wrapper.find('li').getElement().props.style.background).toEqual(
+      'active dot color',
     );
   });
 
-  it("should call onClick function with index, on element click", () => {
+  it('should call onClick function with index, on element click', () => {
     const onClickFun = jest.fn();
     const wrapper = shallow(
       <Dot
@@ -54,9 +54,9 @@ describe("Dot - Unit Test", () => {
         active={true}
         onClick={onClickFun}
         idx="some index"
-      />
+      />,
     );
-    wrapper.find("li").simulate("click");
-    expect(onClickFun).toHaveBeenCalledWith("some index");
+    wrapper.find('li').simulate('click');
+    expect(onClickFun).toHaveBeenCalledWith('some index');
   });
 });
