@@ -37,16 +37,6 @@ const SwiftSliderDots = styled.ul`
 `;
 
 export default class Slider extends React.Component {
-  static defaultProps = {
-    data: [],
-    height: 450,
-    activeDotColor: '#e8784e',
-    interval: 5000,
-    dotColor: '#909192',
-    showDots: true,
-    enableNextAndPrev: true,
-  };
-
   state = {
     currentSlide: 0,
   };
@@ -156,4 +146,14 @@ Slider.propTypes = {
   dotColor: PropTypes.string,
   showDots: PropTypes.bool,
   enableNextAndPrev: PropTypes.bool,
+};
+
+Slider.defaultProps = {
+  data: [],
+  height: 450,
+  activeDotColor: '#e8784e',
+  interval: 5000,
+  dotColor: '#909192',
+  showDots: true,
+  enableNextAndPrev: true,
 };
