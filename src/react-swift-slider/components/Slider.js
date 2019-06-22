@@ -53,6 +53,13 @@ function Slider({
     nextSlide();
   }, currentInterval);
 
+  useEffect(() => {
+    data.forEach(img => {
+      const image = new Image();
+      image.src = img.src;
+    });
+  }, [data]);
+
   const nextSlide = () => {
     if (currentSlide === data.length - 1) {
       return setCurrentSlide(0);
