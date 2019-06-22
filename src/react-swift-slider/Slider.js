@@ -41,7 +41,7 @@ export default class Slider extends React.Component {
     data: [],
     height: 450,
     activeDotColor: '#e8784e',
-    interval: 5000000,
+    interval: 5000,
     dotColor: '#909192',
     showDots: true,
     enableNextAndPrev: true,
