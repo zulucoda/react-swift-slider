@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 - update to use react hooks
+- update to use styled components
 
 ## [5.1.0] - 2019-06-22
 ### Changed

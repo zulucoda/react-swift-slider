@@ -31,6 +31,6 @@ const data = [
 ];
 
 ReactDOM.render(
-  <SwiftSlider data={data} height={900} />,
+  <SwiftSlider data={data} height={900} enableNextAndPrev />,
   document.querySelector('.app'),
 );
