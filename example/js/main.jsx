@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SwiftSlider from 'react-swift-slider';
+import SwiftSlider from '../../lib/react-swift-slider/components/Slider';
 
 const data = [
   {
