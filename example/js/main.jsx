@@ -30,4 +30,7 @@ const data = [
   },
 ];
 
-ReactDOM.render(<SwiftSlider data={data} />, document.querySelector('.app'));
+ReactDOM.render(
+  <SwiftSlider data={data} height={900} />,
+  document.querySelector('.app'),
+);
