@@ -29,13 +29,10 @@ const SwiftSliderControlNext = styled(SwiftSliderControlBase)`
   background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
 `;
 
-export default class Control extends React.Component {
-  render() {
-    const { onPressNext, onPressPrev, direction } = this.props;
-    if (direction === DIRECTION.prev) {
-      return <SwiftSliderControlPrev onClick={onPressPrev} />;
-    } else {
-      return <SwiftSliderControlNext onClick={onPressNext} />;
-    }
-  }
+export default function Control({ onPressNext, onPressPrev, direction }) {
+  return direction === DIRECTION.prev ? (
+    <SwiftSliderControlPrev onClick={onPressPrev} />
+  ) : (
+    <SwiftSliderControlNext onClick={onPressNext} />
+  );
 }

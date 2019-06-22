@@ -10,14 +10,17 @@ const SwiftSliderDot = styled.li`
   background: ${props => props.background};
 `;
 
-export default class Dot extends React.Component {
-  render() {
-    const { active, onClick, idx, activeDotColor, dotColor } = this.props;
-    return (
-      <SwiftSliderDot
-        onClick={() => onClick(idx)}
-        background={active ? activeDotColor : dotColor}
-      />
-    );
-  }
+export default function Dot({
+  active,
+  onClick,
+  idx,
+  activeDotColor,
+  dotColor,
+}) {
+  return (
+    <SwiftSliderDot
+      onClick={() => onClick(idx)}
+      background={active ? activeDotColor : dotColor}
+    />
+  );
 }

@@ -39,9 +39,6 @@ const SwiftSliderSlide = styled.li`
   will-change: z-index;
 `;
 
-export default class Slide extends React.Component {
-  render() {
-    const { src, active } = this.props;
-    return <SwiftSliderSlide backgroundImage={src} active={active} />;
-  }
+export default function Slide({ src, active }) {
+  return <SwiftSliderSlide backgroundImage={src} active={active} />;
 }
