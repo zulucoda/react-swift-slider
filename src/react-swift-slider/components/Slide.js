@@ -29,11 +29,14 @@ const SwiftSliderSlide = styled.li`
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: ${props => (props.active ? '2' : '1')};
+  z-index: ${props => (props.active ? '2' : '0')};
   visibility: ${props => (props.active ? 'visible' : 'hidden')};
-  transition: visibility 1.2s;
-  animation: ${props => (props.active ? fadeIn : fadeOut)} 1.8s;
+  transition: visibility 0.3s;
+  animation: ${props => (props.active ? fadeIn : fadeOut)} 0.8s;
   background-image: url('${props => props.backgroundImage}');
+  will-change: opacity;
+  will-change: visibility;
+  will-change: z-index;
 `;
 
 export default class Slide extends React.Component {
