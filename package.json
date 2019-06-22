@@ -5,7 +5,7 @@
   "private": false,
   "main": "lib/react-swift-slider/Slider.js",
   "scripts": {
-    "lib": "babel src/components --out-dir lib --copy-files && rm -rf lib/react-swift-slider/tests && rm -rf lib/react-swift-slider/types",
+    "lib": "babel src/ --out-dir lib --copy-files && rm -rf lib/react-swift-slider/tests && rm -rf",
     "prettier": "node_modules/.bin/prettier --write src/**/*.js",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "up-version": "npm version major --force --message \"[ci skip] up version for release\"",
@@ -36,11 +36,13 @@
     "react-dom": ">=16.8"
   },
   "dependencies": {
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.8.0",

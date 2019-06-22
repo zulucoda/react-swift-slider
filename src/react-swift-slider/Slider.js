@@ -3,19 +3,51 @@ import PropTypes from 'prop-types';
 import Slide from './Slide';
 import Control, { DIRECTION } from './Control';
 import Dot from './Dot';
+import styled from 'styled-components';
+
+const SwiftSliderContainer = styled.div`
+  position: relative;
+  height: ${props => props.height || '450'}px;
+  @media (max-width: 600px) {
+    height: 250px;
+  }
+`;
+
+const SwiftSliderSlides = styled.ul`
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: ${props => props.height || '450'}px;
+  @media (max-width: 600px) {
+    height: 250px;
+  }
+`;
+
+const SwiftSliderDots = styled.ul`
+  list-style: none;
+  margin: 1.7rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  @media (max-width: 600px) {
+    margin: 1rem 0;
+  }
+`;
 
 export default class Slider extends React.Component {
   static defaultProps = {
     data: [],
     height: 450,
     activeDotColor: '#e8784e',
-    interval: 5000,
+    interval: 5000000,
     dotColor: '#909192',
     showDots: true,
     enableNextAndPrev: true,
   };
 
-  state: State = {
+  state = {
     currentSlide: 0,
   };
 
@@ -58,7 +90,7 @@ export default class Slider extends React.Component {
     this.resetInterval();
   };
 
-  goToSlide = (idx: number) => {
+  goToSlide = idx => {
     this.setState({
       currentSlide: idx,
     });
@@ -75,8 +107,8 @@ export default class Slider extends React.Component {
       enableNextAndPrev,
     } = this.props;
     return (
-      <div className="swift-slider-container">
-        <ul className="swift-slider-slides" style={{ height: height }}>
+      <SwiftSliderContainer>
+        <SwiftSliderSlides height={height}>
           {data.map((item, i) => (
             <Slide
               active={i === this.state.currentSlide}
@@ -84,9 +116,9 @@ export default class Slider extends React.Component {
               key={item.id}
             />
           ))}
-        </ul>
+        </SwiftSliderSlides>
         {showDots ? (
-          <ul className="swift-slider-dots">
+          <SwiftSliderDots>
             {data.map((item, i) => (
               <Dot
                 activeDotColor={activeDotColor}
@@ -97,7 +129,7 @@ export default class Slider extends React.Component {
                 idx={i}
               />
             ))}
-          </ul>
+          </SwiftSliderDots>
         ) : (
           ''
         )}
@@ -111,7 +143,7 @@ export default class Slider extends React.Component {
         ) : (
           ''
         )}
-      </div>
+      </SwiftSliderContainer>
     );
   }
 }
