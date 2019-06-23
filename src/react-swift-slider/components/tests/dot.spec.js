@@ -4,13 +4,14 @@
  * Copyright zulucoda - mfbproject
  */
 import React from 'react';
-import { shallow } from 'enzyme';
 import Dot from '../Dot';
+import { render, fireEvent } from '@testing-library/react';
+import 'jest-dom/extend-expect';
 
 describe('Dot - Unit Test', () => {
   it('should render a non active dot', () => {
     const onClickFun = jest.fn();
-    const wrapper = shallow(
+    const { container } = render(
       <Dot
         dotColor="dot color"
         key="some key"
@@ -19,18 +20,12 @@ describe('Dot - Unit Test', () => {
         idx="some index"
       />,
     );
-
-    expect(wrapper.find('li').getElement().props.className).toEqual(
-      'swift-slider-dot',
-    );
-    expect(wrapper.find('li').getElement().props.style.background).toEqual(
-      'dot color',
-    );
+    expect(container.firstChild).toHaveStyle('background: dot color');
   });
 
   it('should render a active dot', () => {
     const onClickFun = jest.fn();
-    const wrapper = shallow(
+    const { container } = render(
       <Dot
         activeDotColor="active dot color"
         key="some key"
@@ -40,14 +35,12 @@ describe('Dot - Unit Test', () => {
       />,
     );
 
-    expect(wrapper.find('li').getElement().props.style.background).toEqual(
-      'active dot color',
-    );
+    expect(container.firstChild).toHaveStyle('background: active dot color');
   });
 
   it('should call onClick function with index, on element click', () => {
     const onClickFun = jest.fn();
-    const wrapper = shallow(
+    const { container } = render(
       <Dot
         activeDotColor="active dot color"
         key="some key"
@@ -56,7 +49,15 @@ describe('Dot - Unit Test', () => {
         idx="some index"
       />,
     );
-    wrapper.find('li').simulate('click');
+
+    fireEvent.click(
+      container.firstChild,
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      }),
+    );
+
     expect(onClickFun).toHaveBeenCalledWith('some index');
   });
 });
