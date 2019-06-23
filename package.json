@@ -1,6 +1,6 @@
 {
   "name": "react-swift-slider",
-  "version": "6.0.1",
+  "version": "6.1.0",
   "description": "React Swift Slider",
   "private": false,
   "main": "lib/react-swift-slider/index.js",
