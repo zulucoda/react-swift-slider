@@ -12,6 +12,8 @@
     "test": "jest --coverage --env=jsdom",
     "test:watch": "jest --watch --env=jsdom",
     "up-version": "npm version major --force --message \"[ci skip] up version for release\"",
+    "up-version:minor": "npm version minor --force --message \"[ci skip] up version for release\"",
+    "up-version:patch": "npm version minor --force --message \"[ci skip] up version for release\"",
     "precommit": "lint-staged",
     "build": "rollup -c",
     "clean-build": "npm run clean:lib && npm run build"
