@@ -37,7 +37,7 @@ const SwiftSliderDots = styled.ul`
   }
 `;
 
-function Slider({
+function ReactSlider({
   data,
   height,
   activeDotColor,
@@ -125,7 +125,7 @@ function Slider({
   );
 }
 
-Slider.propTypes = {
+ReactSlider.propTypes = {
   data: PropTypes.array.isRequired,
   height: PropTypes.number,
   interval: PropTypes.number,
@@ -135,7 +135,7 @@ Slider.propTypes = {
   enableNextAndPrev: PropTypes.bool,
 };
 
-Slider.defaultProps = {
+ReactSlider.defaultProps = {
   data: [],
   height: 450,
   activeDotColor: '#e8784e',
@@ -145,4 +145,4 @@ Slider.defaultProps = {
   enableNextAndPrev: true,
 };
 
-export default Slider;
+export default ReactSlider;

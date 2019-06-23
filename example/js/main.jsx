@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SwiftSlider from '../../lib/react-swift-slider/components/Slider';
+import Slider from '../../lib/react-swift-slider';
 
 const data = [
   {
@@ -31,6 +31,6 @@ const data = [
 ];
 
 ReactDOM.render(
-  <SwiftSlider data={data} enableNextAndPrev />,
+  <Slider data={data} enableNextAndPrev />,
   document.querySelector('.app'),
 );

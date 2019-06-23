@@ -5,7 +5,7 @@
  */
 import React from 'react';
 import { render, fireEvent, cleanup } from '@testing-library/react';
-import Slider from '../Slider';
+import ReactSlider from '../Slider';
 import 'jest-dom/extend-expect';
 
 describe('Slider - Unit Test', () => {
@@ -35,7 +35,7 @@ describe('Slider - Unit Test', () => {
   ];
 
   it('should render slider', () => {
-    const { container } = render(<Slider data={data} interval={1} />);
+    const { container } = render(<ReactSlider data={data} interval={1} />);
     expect(container.querySelector('div > ul').childElementCount).toEqual(5);
     expect(
       container.querySelector('div >:nth-child(2)').childElementCount,
@@ -45,12 +45,12 @@ describe('Slider - Unit Test', () => {
   });
 
   it('should set the height to 500px when height is specified', () => {
-    const { container } = render(<Slider height={500} data={data} />);
+    const { container } = render(<ReactSlider height={500} data={data} />);
     expect(container.querySelector('div > ul')).toHaveStyle('height : 500px');
   });
 
   it('should go to position 4 when on the first slide when clicking on next', () => {
-    const { container } = render(<Slider data={data} />);
+    const { container } = render(<ReactSlider data={data} />);
 
     expect(container.querySelector('div > ul > li')).toHaveStyle(
       'visibility : visible',
@@ -71,7 +71,7 @@ describe('Slider - Unit Test', () => {
   });
 
   it('should go to previous slide', () => {
-    const { container } = render(<Slider data={data} />);
+    const { container } = render(<ReactSlider data={data} />);
     const prevButton = container.querySelector('div >:nth-child(3)');
     fireEvent.click(prevButton);
 
@@ -99,7 +99,7 @@ describe('Slider - Unit Test', () => {
   });
 
   it('should go to next slide', () => {
-    const { container } = render(<Slider data={data} />);
+    const { container } = render(<ReactSlider data={data} />);
     expect(container.querySelector('div > ul > li')).toHaveStyle(
       'visibility : visible',
     );
@@ -119,7 +119,7 @@ describe('Slider - Unit Test', () => {
   });
 
   it('should go to position 0 when on the last slide when clicking on next', () => {
-    const { container } = render(<Slider data={[data[0], data[1]]} />);
+    const { container } = render(<ReactSlider data={[data[0], data[1]]} />);
     expect(container.querySelector('div > ul > li')).toHaveStyle(
       'visibility : visible',
     );
@@ -148,7 +148,7 @@ describe('Slider - Unit Test', () => {
   });
 
   it('should go slide when clicking on a dot', () => {
-    const { container } = render(<Slider data={data} />);
+    const { container } = render(<ReactSlider data={data} />);
     const dotUl = container.querySelector('div >:nth-child(2)');
 
     expect(dotUl.querySelector(':nth-child(1)')).toHaveStyle(
@@ -169,13 +169,13 @@ describe('Slider - Unit Test', () => {
   });
 
   it('should not show dots', () => {
-    const { container } = render(<Slider data={data} showDots={false} />);
+    const { container } = render(<ReactSlider data={data} showDots={false} />);
     expect(container.querySelectorAll('ul').length).toBe(1);
   });
 
   it('should not show next and previous', () => {
     const { container } = render(
-      <Slider data={data} enableNextAndPrev={false} />,
+      <ReactSlider data={data} enableNextAndPrev={false} />,
     );
     expect(container.querySelector('div >:nth-child(3)')).toBeFalsy();
     expect(container.querySelector('div >:nth-child(4)')).toBeFalsy();
