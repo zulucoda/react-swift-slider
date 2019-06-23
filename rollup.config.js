@@ -7,7 +7,7 @@ import { uglify } from 'rollup-plugin-uglify';
 export default {
   input: 'src/react-swift-slider/index.js',
   output: {
-    file: 'lib/react-swift-slider.js',
+    file: 'lib/react-swift-slider.min.js',
     format: 'cjs',
   },
   plugins: [
