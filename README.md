@@ -123,18 +123,5 @@ class App extends Component {
 ```
 
 
-### CSS Settings
-
-| Name | Component | Description |
-| :------| :-----------| :-----------|
-| swift-slider-container   | Slider | Container element for react-swift-slider |
-| swift-slider-slides  | Slides | List of slides |
-| swift-slider-dots   | Dots | List of dots |
-| swift-slider-prev   | Control | Control to navigate to the previous slide  |
-| swift-slider-next  | Control | Control to navigate to the next slide  |
-| swift-slider-slide  | Slide | A slide with a background image set |
-| swift-slider-active  | Slide | Sets the current active slide |
-| swift-slider-dot  | Dot | A dot with set with the default colour |
-
 ### License
 MIT License.
