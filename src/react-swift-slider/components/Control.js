@@ -7,6 +7,7 @@ export const DIRECTION = {
 };
 
 const SwiftSliderControlBase = styled.div`
+  position: absolute;
   top: 0;
   bottom: 0;
   display: flex;
@@ -15,18 +16,21 @@ const SwiftSliderControlBase = styled.div`
   padding: 0 2rem;
   width: 30%;
   cursor: pointer;
+  align-items: center;
 `;
 
 const SwiftSliderControlPrev = styled(SwiftSliderControlBase)`
   left: 0;
-  align-items: enter;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+  &:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+  }
 `;
 
 const SwiftSliderControlNext = styled(SwiftSliderControlBase)`
   right: 0;
-  align-items: center;
-  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+  &:hover {
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+  }
 `;
 
 export default function Control({ onPressNext, onPressPrev, direction }) {

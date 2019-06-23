@@ -4,35 +4,59 @@
  * Copyright zulucoda - mfbproject
  */
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 import Control, { DIRECTION } from '../Control';
 
 describe('Control - Unit Test', () => {
   describe('previous', () => {
     it('should render previous div with previous on click function', () => {
       const onPressPrev = jest.fn();
-      const wrapper = shallow(
-        <Control direction={DIRECTION.prev} onPressPrev={onPressPrev} />,
+      const onNextPrev = jest.fn();
+      const { container } = render(
+        <Control
+          direction={DIRECTION.prev}
+          onPressPrev={onPressPrev}
+          onPressNext={onNextPrev}
+        />,
       );
-      expect(
-        wrapper.contains(
-          <div className="swift-slider-prev" onClick={onPressPrev} />,
-        ),
-      ).toBeTruthy();
+
+      fireEvent(
+        container.firstChild,
+        new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+        }),
+      );
+
+      expect(onPressPrev).toHaveBeenCalled();
+
+      expect(onNextPrev).not.toHaveBeenCalled();
     });
   });
 
   describe('next', () => {
     it('should render next div with next on click function', () => {
+      const onPressPrev = jest.fn();
       const onNextPrev = jest.fn();
-      const wrapper = shallow(
-        <Control direction={DIRECTION.next} onPressNext={onNextPrev} />,
+      const { container } = render(
+        <Control
+          direction={DIRECTION.next}
+          onPressPrev={onPressPrev}
+          onPressNext={onNextPrev}
+        />,
       );
-      expect(
-        wrapper.contains(
-          <div className="swift-slider-next" onClick={onNextPrev} />,
-        ),
-      ).toBeTruthy();
+
+      fireEvent(
+        container.firstChild,
+        new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+        }),
+      );
+
+      expect(onPressPrev).not.toHaveBeenCalled();
+
+      expect(onNextPrev).toHaveBeenCalled();
     });
   });
 });
