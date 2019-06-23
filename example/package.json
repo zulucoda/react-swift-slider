@@ -1,7 +1,7 @@
 {
-  "name": "react-tunes-player-example",
+  "name": "react-swift-slider-example",
   "version": "0.0.1",
-  "description": "Simple example app for react-tunes-player",
+  "description": "Simple example app for react-swift-slider",
   "main": "dist/bundle.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --progress --colors"
