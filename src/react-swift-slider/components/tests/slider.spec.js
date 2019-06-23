@@ -44,6 +44,11 @@ describe('Slider - Unit Test', () => {
     expect(container.querySelector('div >:nth-child(2)')).toBeTruthy();
   });
 
+  it('should set the height to 500px when height is specified', () => {
+    const { container } = render(<Slider height={500} data={data} />);
+    expect(container.querySelector('div > ul')).toHaveStyle('height : 500px');
+  });
+
   it('should go to position 4 when on the first slide when clicking on next', () => {
     const { container } = render(<Slider data={data} />);
 
