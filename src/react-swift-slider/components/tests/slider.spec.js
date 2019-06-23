@@ -4,16 +4,13 @@
  * Copyright zulucoda - mfbproject
  */
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { render, fireEvent, cleanup } from '@testing-library/react';
 import Slider from '../Slider';
-import { JSDOM } from 'jsdom';
-import Slide from '../Slide';
-
-const { document } = new JSDOM('').window;
-global.document = document;
-global.window = document.defaultView;
+import 'jest-dom/extend-expect';
 
 describe('Slider - Unit Test', () => {
+  afterEach(cleanup);
+
   const data = [
     {
       id: '1',
@@ -38,68 +35,144 @@ describe('Slider - Unit Test', () => {
   ];
 
   it('should render slider', () => {
-    const wrapper = shallow(<Slider data={data} />);
-    expect(wrapper.find('.swift-slider-container').length).toEqual(1);
-    expect(wrapper.find('.swift-slider-slides').length).toEqual(1);
-  });
-
-  it('should NOT crash when rendered without data being set', () => {
-    shallow(<Slider />);
+    const { container } = render(<Slider data={data} />);
+    expect(container.querySelector('div > ul').childElementCount).toEqual(5);
+    expect(
+      container.querySelector('div >:nth-child(2)').childElementCount,
+    ).toEqual(5);
+    expect(container.querySelector('div >:nth-child(3)')).toBeTruthy();
+    expect(container.querySelector('div >:nth-child(2)')).toBeTruthy();
   });
 
   it('should go to position 4 when on the first slide when clicking on next', () => {
-    const wrapper = mount(<Slider data={data} />);
-    expect(wrapper.state().currentSlide).toEqual(0);
-    wrapper.find('div.swift-slider-prev').simulate('click');
-    expect(wrapper.state().currentSlide).toEqual(4);
+    const { container } = render(<Slider data={data} />);
+
+    expect(container.querySelector('div > ul > li')).toHaveStyle(
+      'visibility : visible',
+    );
+    expect(container.querySelector('div > ul > :nth-child(5)')).toHaveStyle(
+      'visibility : hidden',
+    );
+
+    const prevButton = container.querySelector('div >:nth-child(3)');
+    fireEvent.click(prevButton);
+
+    expect(container.querySelector('div > ul > li')).toHaveStyle(
+      'visibility : hidden',
+    );
+    expect(container.querySelector('div > ul > :nth-child(5)')).toHaveStyle(
+      'visibility : visible',
+    );
   });
 
   it('should go to previous slide', () => {
-    const wrapper = mount(<Slider data={data} />);
-    wrapper.find('div.swift-slider-prev').simulate('click');
-    expect(wrapper.state().currentSlide).toEqual(4);
-    wrapper.find('div.swift-slider-prev').simulate('click');
-    expect(wrapper.state().currentSlide).toEqual(3);
+    const { container } = render(<Slider data={data} />);
+    const prevButton = container.querySelector('div >:nth-child(3)');
+    fireEvent.click(prevButton);
+
+    expect(container.querySelector('div > ul > li')).toHaveStyle(
+      'visibility : hidden',
+    );
+    expect(container.querySelector('div > ul > :nth-child(4)')).toHaveStyle(
+      'visibility : hidden',
+    );
+    expect(container.querySelector('div > ul > :nth-child(5)')).toHaveStyle(
+      'visibility : visible',
+    );
+
+    fireEvent.click(prevButton);
+
+    expect(container.querySelector('div > ul > li')).toHaveStyle(
+      'visibility : hidden',
+    );
+    expect(container.querySelector('div > ul > :nth-child(4)')).toHaveStyle(
+      'visibility : visible',
+    );
+    expect(container.querySelector('div > ul > :nth-child(5)')).toHaveStyle(
+      'visibility : hidden',
+    );
   });
 
   it('should go to next slide', () => {
-    const wrapper = mount(<Slider data={data} />);
-    expect(wrapper.state().currentSlide).toEqual(0);
-    wrapper.find('div.swift-slider-next').simulate('click');
-    expect(wrapper.state().currentSlide).toEqual(1);
+    const { container } = render(<Slider data={data} />);
+    expect(container.querySelector('div > ul > li')).toHaveStyle(
+      'visibility : visible',
+    );
+    expect(container.querySelector('div > ul > :nth-child(2)')).toHaveStyle(
+      'visibility : hidden',
+    );
+
+    const nextButton = container.querySelector('div >:nth-child(4)');
+    fireEvent.click(nextButton);
+
+    expect(container.querySelector('div > ul > li')).toHaveStyle(
+      'visibility : hidden',
+    );
+    expect(container.querySelector('div > ul > :nth-child(2)')).toHaveStyle(
+      'visibility : visible',
+    );
   });
 
   it('should go to position 0 when on the last slide when clicking on next', () => {
-    const wrapper = mount(<Slider data={[data[0], data[1]]} />);
-    expect(wrapper.state().currentSlide).toEqual(0);
-    wrapper.find('div.swift-slider-next').simulate('click');
-    expect(wrapper.state().currentSlide).toEqual(1);
-    wrapper.find('div.swift-slider-next').simulate('click');
-    expect(wrapper.state().currentSlide).toEqual(0);
+    const { container } = render(<Slider data={[data[0], data[1]]} />);
+    expect(container.querySelector('div > ul > li')).toHaveStyle(
+      'visibility : visible',
+    );
+    expect(container.querySelector('div > ul > :nth-child(2)')).toHaveStyle(
+      'visibility : hidden',
+    );
+
+    const nextButton = container.querySelector('div >:nth-child(4)');
+    fireEvent.click(nextButton);
+
+    expect(container.querySelector('div > ul > li')).toHaveStyle(
+      'visibility : hidden',
+    );
+    expect(container.querySelector('div > ul > :nth-child(2)')).toHaveStyle(
+      'visibility : visible',
+    );
+
+    fireEvent.click(nextButton);
+
+    expect(container.querySelector('div > ul > li')).toHaveStyle(
+      'visibility : visible',
+    );
+    expect(container.querySelector('div > ul > :nth-child(2)')).toHaveStyle(
+      'visibility : hidden',
+    );
   });
 
   it('should go slide when clicking on a dot', () => {
-    const wrapper = mount(<Slider data={data} />);
-    expect(wrapper.state().currentSlide).toEqual(0);
-    wrapper
-      .find('li.swift-slider-dot')
-      .at(3)
-      .simulate('click');
-    expect(wrapper.state().currentSlide).toEqual(3);
+    const { container } = render(<Slider data={data} />);
+    const dotUl = container.querySelector('div >:nth-child(2)');
+
+    expect(dotUl.querySelector(':nth-child(1)')).toHaveStyle(
+      'background : #e8784e',
+    );
+    expect(dotUl.querySelector(':nth-child(3)')).toHaveStyle(
+      'background : #909192',
+    );
+
+    fireEvent.click(dotUl.querySelector(':nth-child(3)'));
+
+    expect(dotUl.querySelector(':nth-child(1)')).toHaveStyle(
+      'background : #909192',
+    );
+    expect(dotUl.querySelector(':nth-child(3)')).toHaveStyle(
+      'background : #e8784e',
+    );
   });
 
   it('should not show dots', () => {
-    const wrapper = shallow(<Slider data={data} showDots={false} />);
-    expect(wrapper.find('.swift-slider-dots').length).toEqual(0);
-  });
-
-  it('should not show dots', () => {
-    const wrapper = shallow(<Slider data={data} showDots={false} />);
-    expect(wrapper.find('.swift-slider-dots').length).toEqual(0);
+    const { container } = render(<Slider data={data} showDots={false} />);
+    expect(container.querySelectorAll('ul').length).toBe(1);
   });
 
   it('should not show next and previous', () => {
-    const wrapper = shallow(<Slider data={data} enableNextAndPrev={false} />);
-    expect(wrapper.find('Control').length).toEqual(0);
+    const { container } = render(
+      <Slider data={data} enableNextAndPrev={false} />,
+    );
+    expect(container.querySelector('div >:nth-child(3)')).toBeFalsy();
+    expect(container.querySelector('div >:nth-child(4)')).toBeFalsy();
   });
 });
