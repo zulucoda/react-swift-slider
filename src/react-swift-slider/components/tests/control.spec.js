@@ -19,6 +19,7 @@ describe('Control - Unit Test', () => {
           direction={DIRECTION.prev}
           onPressPrev={onPressPrev}
           onPressNext={onNextPrev}
+          height={450}
         />,
       );
 
@@ -45,6 +46,7 @@ describe('Control - Unit Test', () => {
           direction={DIRECTION.next}
           onPressPrev={onPressPrev}
           onPressNext={onNextPrev}
+          height={450}
         />,
       );
 

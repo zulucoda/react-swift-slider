@@ -15,6 +15,7 @@ const SwiftSliderControlBase = styled.div`
   z-index: 10;
   padding: 0 2rem;
   width: 30%;
+  height: ${props => props.height}px;
   cursor: pointer;
   align-items: center;
 `;
@@ -33,10 +34,15 @@ const SwiftSliderControlNext = styled(SwiftSliderControlBase)`
   }
 `;
 
-export default function Control({ onPressNext, onPressPrev, direction }) {
+export default function Control({
+  onPressNext,
+  onPressPrev,
+  direction,
+  height,
+}) {
   return direction === DIRECTION.prev ? (
-    <SwiftSliderControlPrev onClick={onPressPrev} />
+    <SwiftSliderControlPrev onClick={onPressPrev} height={height} />
   ) : (
-    <SwiftSliderControlNext onClick={onPressNext} />
+    <SwiftSliderControlNext onClick={onPressNext} height={height} />
   );
 }

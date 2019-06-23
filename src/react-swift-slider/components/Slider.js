@@ -104,12 +104,20 @@ function Slider({
         ''
       )}
       {enableNextAndPrev ? (
-        <Control onPressPrev={prevSlide} direction={DIRECTION.prev} />
+        <Control
+          onPressPrev={prevSlide}
+          direction={DIRECTION.prev}
+          height={height}
+        />
       ) : (
         ''
       )}
       {enableNextAndPrev ? (
-        <Control onPressNext={nextSlide} direction={DIRECTION.next} />
+        <Control
+          onPressNext={nextSlide}
+          direction={DIRECTION.next}
+          height={height}
+        />
       ) : (
         ''
       )}
