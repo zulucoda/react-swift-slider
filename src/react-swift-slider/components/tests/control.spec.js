@@ -4,10 +4,12 @@
  * Copyright zulucoda - mfbproject
  */
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, cleanup } from '@testing-library/react';
 import Control, { DIRECTION } from '../Control';
 
 describe('Control - Unit Test', () => {
+  afterEach(cleanup);
+
   describe('previous', () => {
     it('should render previous div with previous on click function', () => {
       const onPressPrev = jest.fn();

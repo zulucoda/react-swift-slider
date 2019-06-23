@@ -35,7 +35,7 @@ describe('Slider - Unit Test', () => {
   ];
 
   it('should render slider', () => {
-    const { container } = render(<Slider data={data} />);
+    const { container } = render(<Slider data={data} interval={1} />);
     expect(container.querySelector('div > ul').childElementCount).toEqual(5);
     expect(
       container.querySelector('div >:nth-child(2)').childElementCount,

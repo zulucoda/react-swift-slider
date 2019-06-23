@@ -4,10 +4,12 @@
  * Copyright zulucoda - mfbproject
  */
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import Slide from '../Slide';
 
 describe('React Swift Slider: Slide - Unit Test', () => {
+  afterEach(cleanup);
+
   describe('when active', () => {
     it('should render Slide with active css properties', () => {
       const props = {

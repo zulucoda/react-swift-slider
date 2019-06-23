@@ -5,10 +5,12 @@
  */
 import React from 'react';
 import Dot from '../Dot';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, cleanup } from '@testing-library/react';
 import 'jest-dom/extend-expect';
 
 describe('Dot - Unit Test', () => {
+  afterEach(cleanup);
+
   it('should render a non active dot', () => {
     const onClickFun = jest.fn();
     const { container } = render(
