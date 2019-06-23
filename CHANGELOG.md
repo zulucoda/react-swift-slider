@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.1.1] - 2019-06-23
+### Changed
+- adding rollup to fix current build bug :bug:by [@zulucoda](https://github.com/zulucoda).
+
 ## [6.0.1] - 2019-06-23
 ### Changed
 - remove css settings from README.md by [@zulucoda](https://github.com/zulucoda).
