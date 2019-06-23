@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [6.1.1] - 2019-06-23
+## [6.2.0] - 2019-06-23
+### Changed
+- fixing package.json :bug: by [@zulucoda](https://github.com/zulucoda).
+
+## [6.1.0] - 2019-06-23
 ### Changed
 - adding rollup to fix current build bug :bug:by [@zulucoda](https://github.com/zulucoda).
 

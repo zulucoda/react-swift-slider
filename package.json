@@ -3,7 +3,7 @@
   "version": "6.1.0",
   "description": "React Swift Slider",
   "private": false,
-  "main": "lib/react-swift-slider/index.js",
+  "main": "lib/react-swift-slider.min.js",
   "scripts": {
     "clean:lib": "rm -rf lib",
     "lib": "babel src/ --out-dir lib --copy-files && rm -rf lib/react-swift-slider/components/tests && rm -rf lib/react-swift-slider/tests",
