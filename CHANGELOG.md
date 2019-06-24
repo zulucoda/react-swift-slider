@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.3.0] - 2019-06-24
+### Changed
+- remove react-swift-slider-example.gif from .npmignore file by [@zulucoda](https://github.com/zulucoda).
+
 ## [6.2.0] - 2019-06-23
 ### Changed
 - fixing package.json :bug: by [@zulucoda](https://github.com/zulucoda).
