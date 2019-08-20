@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [6.4.0] - 2019-06-24
+## [6.4.0] - 2019-08-20
 ### Changed
 - update README - [@zulucoda](https://github.com/zulucoda).
 - fixed coveralls - [@zulucoda](https://github.com/zulucoda).
