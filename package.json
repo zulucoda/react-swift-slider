@@ -1,6 +1,6 @@
 {
   "name": "react-swift-slider",
-  "version": "6.3.0",
+  "version": "6.4.0",
   "description": "React Swift Slider",
   "private": false,
   "main": "lib/react-swift-slider.min.js",
@@ -13,7 +13,7 @@
     "test:watch": "jest --watch --env=jsdom",
     "up-version": "npm version major --force --message \"[ci skip] up version for release\"",
     "up-version:minor": "npm version minor --force --message \"[ci skip] up version for release\"",
-    "up-version:patch": "npm version minor --force --message \"[ci skip] up version for release\"",
+    "up-version:patch": "npm version patch --force --message \"[ci skip] up version for release\"",
     "precommit": "lint-staged",
     "build": "rollup -c",
     "clean-build": "npm run clean:lib && npm run build"
@@ -54,6 +54,7 @@
     "@testing-library/react-hooks": "^1.0.4",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
+    "coveralls": "^3.0.6",
     "husky": "^2.4.1",
     "jest": "^24.8.0",
     "jest-dom": "^3.5.0",
