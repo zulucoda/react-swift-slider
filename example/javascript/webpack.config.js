@@ -13,12 +13,12 @@ module.exports = {
     app: [
       `webpack-dev-server/client?http://0.0.0.0:${PORT}`,
       'webpack/hot/only-dev-server',
-      './js/main.jsx',
+      './app/main.jsx',
     ],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/js/',
+    publicPath: '/app/',
     filename: 'bundle.js',
   },
   devServer: {
