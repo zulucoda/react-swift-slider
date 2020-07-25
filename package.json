@@ -4,6 +4,7 @@
   "description": "React Swift Slider",
   "private": false,
   "main": "lib/react-swift-slider.min.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "clean:lib": "rm -rf lib",
     "lib": "babel src/ --out-dir lib --copy-files && rm -rf lib/react-swift-slider/components/tests && rm -rf lib/react-swift-slider/tests",
@@ -16,7 +17,10 @@
     "up-version:patch": "npm version patch --force --message \"[ci skip] up version for release\"",
     "precommit": "lint-staged",
     "build": "rollup -c",
-    "clean-build": "npm run clean:lib && npm run build"
+    "copy-declaration": "cp src/react-swift-slider/index.d.ts lib/index.d.ts -f",
+    "clean-build": "npm run clean:lib && npm run build && npm run copy-declaration",
+    "dev-js": "npm run clean-build && cd example/javascript && npm run start",
+    "dev-ts": "npm run clean-build && cd example/typescript && npm run start"
   },
   "keywords": [
     "react",

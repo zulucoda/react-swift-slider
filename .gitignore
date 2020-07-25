@@ -22,4 +22,4 @@ yarn-error.log*
 
 .idea
 
-example/node_modules
+example/**/node_modules
