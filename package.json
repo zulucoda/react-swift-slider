@@ -19,7 +19,8 @@
     "build": "rollup -c",
     "copy-declaration": "cp src/react-swift-slider/index.d.ts lib/index.d.ts -f",
     "clean-build": "npm run clean:lib && npm run build && npm run copy-declaration",
-    "dev-js": "npm run clean-build && cd example/javascript && npm run start"
+    "dev-js": "npm run clean-build && cd example/javascript && npm run start",
+    "dev-ts": "npm run clean-build && cd example/typescript && npm run start"
   },
   "keywords": [
     "react",
