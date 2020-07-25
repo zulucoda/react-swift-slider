@@ -16,7 +16,8 @@
     "up-version:patch": "npm version patch --force --message \"[ci skip] up version for release\"",
     "precommit": "lint-staged",
     "build": "rollup -c",
-    "clean-build": "npm run clean:lib && npm run build"
+    "clean-build": "npm run clean:lib && npm run build",
+    "dev-js": "npm run clean-build && cd example/javascript && npm run start"
   },
   "keywords": [
     "react",
