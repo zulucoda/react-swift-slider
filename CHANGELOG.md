@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.5.0] - 2020-07-25
+### Changed
+- adding type declaration for react-swift-slider - [@zulucoda](https://github.com/zulucoda).
+- adding typescript example - [@zulucoda](https://github.com/zulucoda).
+
 ## [6.4.0] - 2019-08-20
 ### Changed
 - update README - [@zulucoda](https://github.com/zulucoda).
