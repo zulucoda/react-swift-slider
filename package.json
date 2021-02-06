@@ -45,43 +45,42 @@
     "react-dom": ">=16.8"
   },
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "styled-components": "^4.3.2"
+    "prop-types": "15.7.2",
+    "styled-components": "5.2.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
-    "@testing-library/react": "^8.0.1",
-    "@testing-library/react-hooks": "^1.0.4",
-    "babel-jest": "^24.8.0",
-    "babel-loader": "^8.0.6",
-    "coveralls": "^3.0.6",
-    "husky": "^2.4.1",
-    "jest": "^24.8.0",
-    "jest-dom": "^3.5.0",
-    "lint-staged": "^8.2.1",
-    "prettier": "^1.18.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-test-renderer": "^16.8.6",
-    "rollup": "^1.16.2",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-node-resolve": "^5.0.4",
-    "rollup-plugin-uglify": "^6.0.2",
-    "webpack": "^4.34.0",
-    "webpack-cli": "^3.3.4",
-    "webpack-dev-server": "^3.7.1"
+    "@babel/cli": "7.12.13",
+    "@babel/core": "7.12.13",
+    "@babel/plugin-proposal-class-properties": "7.12.13",
+    "@babel/preset-env": "7.12.13",
+    "@babel/preset-react": "7.12.13",
+    "@testing-library/react": "11.2.5",
+    "@testing-library/react-hooks": "5.0.3",
+    "babel-jest": "26.6.3",
+    "babel-loader": "8.2.2",
+    "coveralls": "3.1.0",
+    "husky": "4.3.8",
+    "jest": "26.6.3",
+    "jest-dom": "4.0.0",
+    "lint-staged": "10.5.4",
+    "prettier": "2.2.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-test-renderer": "17.0.1",
+    "rollup": "2.38.5",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-terser": "7.0.2",
+    "webpack": "5.21.1",
+    "webpack-cli": "4.5.0"
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
     "transform": {
-      "^.+\\.(js|jsx)$": "babel-jest"
+      ".+\\.(js|jsx)$": "babel-jest"
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
