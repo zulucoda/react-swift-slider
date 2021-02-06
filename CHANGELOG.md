@@ -5,6 +5,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## vnext
+- add css override handle
+- customize css properties:
+    1. add width
+    1. update height
+    1. max-width & height for mobile responsiveness
+- dot properties:
+    1. size
+    1. border colour
+    1. has border
+- add arrow
+    1. show arrow
+- play & pause button
+    1. show play & pause button
+- add thumbnails
+    1. show thumbnails
+    1. thumbnail bar position
+- show slide number & total
+- allow infinite scroll
+- add slide transition delay
+- add carousal transition
+- add legend
+
+
+    
 
 ## [6.5.0] - 2020-07-25
 ### Changed
