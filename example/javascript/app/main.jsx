@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Slider from '../../../lib/react-swift-slider.min';
+import Slider, {
+  CSS_OVERRIDE_EXTERNAL,
+} from '../../../lib/react-swift-slider.min';
 
 const data = [
   {
