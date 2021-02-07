@@ -8,7 +8,9 @@ export const CSS_OVERRIDE = {
   swiftSliderSlidesClass: 'swift-slider-slides',
   swiftSliderDotsClass: 'swift-slider-dots',
   swiftSliderDotClass: 'swift-slider-dot',
+  swiftSliderActiveDotClass: 'swift-slider-active-dot',
   swiftSliderSlideClass: 'swift-slider-slide',
+  swiftSliderActiveSlideClass: 'swift-slider-active-slide',
   swiftSliderPreviousBtnClass: 'swift-slider-prev-btn',
   swiftSliderNextBtnClass: 'swift-slider-next-btn',
 };

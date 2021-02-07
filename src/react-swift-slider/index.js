@@ -4,4 +4,6 @@
  * Copyright zulucoda - mfbproject
  */
 import Slider from './components/Slider';
+import { CSS_OVERRIDE_EXTERNAL } from './config';
+export { CSS_OVERRIDE_EXTERNAL };
 export default Slider;

@@ -18,11 +18,14 @@ export default function Dot({
   activeDotColor,
   dotColor,
 }) {
+  const className = active
+    ? CSS_OVERRIDE.swiftSliderActiveDotClass
+    : CSS_OVERRIDE.swiftSliderDotClass;
   return (
     <SwiftSliderDot
       onClick={() => onClick(idx)}
       background={active ? activeDotColor : dotColor}
-      className={CSS_OVERRIDE.swiftSliderDotClass}
+      className={className}
     />
   );
 }

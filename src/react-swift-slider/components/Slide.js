@@ -17,11 +17,14 @@ const SwiftSliderSlide = styled.li`
 `;
 
 export default function Slide({ src, active }) {
+  const className = active
+    ? CSS_OVERRIDE.swiftSliderActiveSlideClass
+    : CSS_OVERRIDE.swiftSliderSlideClass;
   return (
     <SwiftSliderSlide
       backgroundImage={src}
       active={active}
-      className={CSS_OVERRIDE.swiftSliderSlideClass}
+      className={className}
     />
   );
 }

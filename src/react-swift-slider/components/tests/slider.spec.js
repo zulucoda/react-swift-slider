@@ -190,10 +190,26 @@ describe('Slider - Unit Test', () => {
         container.querySelectorAll(CSS_OVERRIDE_EXTERNAL.swiftSliderSlideClass),
       ).toMatchSnapshot();
     });
+    it('should get the active slide by using className - this will allow for default styling override', () => {
+      const { container } = render(<ReactSlider data={data} />);
+      expect(
+        container.querySelectorAll(
+          CSS_OVERRIDE_EXTERNAL.swiftSliderActiveSlideClass,
+        ),
+      ).toMatchSnapshot();
+    });
     it('should get all dots by using className - this will allow for default styling override', () => {
       const { container } = render(<ReactSlider data={data} />);
       expect(
         container.querySelectorAll(CSS_OVERRIDE_EXTERNAL.swiftSliderDotClass),
+      ).toMatchSnapshot();
+    });
+    it('should get the active dot by using className - this will allow for default styling override', () => {
+      const { container } = render(<ReactSlider data={data} />);
+      expect(
+        container.querySelectorAll(
+          CSS_OVERRIDE_EXTERNAL.swiftSliderActiveDotClass,
+        ),
       ).toMatchSnapshot();
     });
     it('should get the previous btn by using className - this will allow for default styling override', () => {
