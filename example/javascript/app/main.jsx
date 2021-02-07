@@ -30,15 +30,10 @@ const data = [
   {
     id: '6',
     src:
-      'https://media.mfbproject.co.za/repos/ARWP_RearRunning_Desk_1920_1080_Hero.png',
-  },
-  {
-    id: '7',
-    src:
       'https://media.mfbproject.co.za/repos/ARWP_Running_Desk_1920_1080_Engine.png',
   },
   {
-    id: '8',
+    id: '7',
     src:
       'https://media.mfbproject.co.za/repos/ARWP_Rear34Run_Desk_1920_1080_Hero.png',
   },
