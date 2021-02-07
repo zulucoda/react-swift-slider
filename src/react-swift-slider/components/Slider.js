@@ -48,11 +48,9 @@ function ReactSlider({
   enableNextAndPrev,
 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [currentInterval, setCurrentInterval] = useState(interval);
-
-  useInterval(() => {
+  const [intervalId] = useInterval(() => {
     nextSlide();
-  }, currentInterval);
+  }, interval);
 
   useEffect(() => {
     data.forEach((img) => {
@@ -73,12 +71,12 @@ function ReactSlider({
       return setCurrentSlide(data.length - 1);
     }
     setCurrentSlide(currentSlide - 1);
-    setCurrentInterval(currentInterval + 1);
+    clearInterval(intervalId);
   };
 
   const goToSlide = (idx) => {
     setCurrentSlide(idx);
-    setCurrentInterval(currentInterval - 1);
+    clearInterval(intervalId);
   };
 
   return (

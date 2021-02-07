@@ -37,6 +37,7 @@ NodeList [
 exports[`Slider - Unit Test css override handles should get slider container by using className - this will allow for default styling override 1`] = `
 <div
   class="sc-jSgupP prcHq swift-slider-container"
+  height="450"
 >
   <ul
     class="sc-gKsewC dYsBIF swift-slider-slides"
