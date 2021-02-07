@@ -1,6 +1,6 @@
 {
   "name": "react-swift-slider",
-  "version": "6.5.0",
+  "version": "7.0.0",
   "description": "React Swift Slider",
   "private": false,
   "main": "lib/react-swift-slider.min.js",
@@ -91,7 +91,9 @@
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
     ],
-    "setupFilesAfterEnv": ["<rootDir>/jest-setup.js"]
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest-setup.js"
+    ]
   },
   "lint-staged": {
     "*.{js,jsx}": [
