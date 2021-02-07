@@ -163,10 +163,26 @@ describe('Slider - Unit Test', () => {
     expect(container.querySelector('div >:nth-child(4)')).toBeFalsy();
   });
 
-  it('should get slider by using className - this will allow for default styling override', () => {
-    const { container } = render(<ReactSlider data={data} />);
-    expect(
-      container.querySelector(CSS_OVERRIDE_EXTERNAL.swiftSliderContainerClass),
-    ).toMatchSnapshot();
+  describe('css override handles', () => {
+    it('should get slider container by using className - this will allow for default styling override', () => {
+      const { container } = render(<ReactSlider data={data} />);
+      expect(
+        container.querySelector(
+          CSS_OVERRIDE_EXTERNAL.swiftSliderContainerClass,
+        ),
+      ).toMatchSnapshot();
+    });
+    it('should get slider slides by using className - this will allow for default styling override', () => {
+      const { container } = render(<ReactSlider data={data} />);
+      expect(
+        container.querySelector(CSS_OVERRIDE_EXTERNAL.swiftSliderSlidesClass),
+      ).toMatchSnapshot();
+    });
+    it('should get slider dots container by using className - this will allow for default styling override', () => {
+      const { container } = render(<ReactSlider data={data} />);
+      expect(
+        container.querySelector(CSS_OVERRIDE_EXTERNAL.swiftSliderDotsClass),
+      ).toMatchSnapshot();
+    });
   });
 });
