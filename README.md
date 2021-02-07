@@ -122,6 +122,20 @@ class App extends Component {
 }
 ```
 
+### Available CSS Overrides
+
+| Class | Description |
+| :------| :-----------|
+| `.swift-slider-container`   | Override slider container (slider wrapper) |
+| `.swift-slider-slides`  | Override slides container |
+| `.swift-slider-active-slide`   | Override active slide (current active slide displayed) |
+| `.swift-slider-slide`   | Override all slides  |
+| `.swift-slider-dots`  | Override dots (bullets) container  |
+| `.swift-slider-active-dot`  | Override active dot (bullet) |
+| `.swift-slider-dot`  | Override all dots (bullets) |
+| `.swift-slider-prev-btn`  | Override previous button |
+| `.swift-slider-next-btn`  | Override next button |
+
 
 ### License
 MIT License.

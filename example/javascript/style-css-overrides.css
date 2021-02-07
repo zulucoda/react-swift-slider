@@ -1,0 +1,10 @@
+
+/**
+ * CSS Override example
+ */
+.swift-slider-container {
+    margin: 0;
+    padding: 0;
+    border: 5px dotted #C21F39;
+    /*width: 600px;*/ /* use this to override the width */
+}

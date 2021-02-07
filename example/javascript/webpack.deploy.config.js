@@ -3,27 +3,19 @@
  * Copyright mfbproject.co.za - muzi@mfbproject.co.za
  * Copyright zulucoda - mfbproject
  */
-const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
-
-const PORT = 4000;
 
 module.exports = {
   entry: {
-    app: [
-      `webpack-dev-server/client?http://0.0.0.0:${PORT}`,
-      'webpack/hot/only-dev-server',
-      './app/index.jsx',
-    ],
+    app: ['./app/index.jsx'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/app/',
-    filename: 'bundle.js',
   },
-  devServer: {
-    port: PORT,
-    hot: true,
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -39,5 +31,4 @@ module.exports = {
     ],
   },
   devtool: 'source-map',
-  plugins: [new webpack.HotModuleReplacementPlugin()],
 };

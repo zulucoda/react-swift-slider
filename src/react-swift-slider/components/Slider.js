@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Slide from './Slide';
-import Control, { DIRECTION } from './Control';
+import Control from './Control';
 import Dot from './Dot';
 import { useInterval } from '../hooks/use-interval';
+import { CSS_OVERRIDE, DEFAULT_PROPS, DIRECTION } from '../config';
 
 const SwiftSliderContainer = styled.div`
   position: relative;
-  height: ${props => props.height || '450'}px;
+  height: ${(props) => props.height || '450'}px;
   @media (max-width: 600px) {
     height: 250px;
   }
@@ -19,7 +20,7 @@ const SwiftSliderSlides = styled.ul`
   padding: 0;
   margin: 0;
   list-style: none;
-  height: ${props => props.height || '450'}px;
+  height: ${(props) => props.height || '450'}px;
   @media (max-width: 600px) {
     height: 250px;
   }
@@ -47,14 +48,12 @@ function ReactSlider({
   enableNextAndPrev,
 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [currentInterval, setCurrentInterval] = useState(interval);
-
-  useInterval(() => {
+  const [intervalId] = useInterval(() => {
     nextSlide();
-  }, currentInterval);
+  }, interval);
 
   useEffect(() => {
-    data.forEach(img => {
+    data.forEach((img) => {
       const image = new Image();
       image.src = img.src;
     });
@@ -72,23 +71,29 @@ function ReactSlider({
       return setCurrentSlide(data.length - 1);
     }
     setCurrentSlide(currentSlide - 1);
-    setCurrentInterval(currentInterval + 1);
+    clearInterval(intervalId);
   };
 
-  const goToSlide = idx => {
+  const goToSlide = (idx) => {
     setCurrentSlide(idx);
-    setCurrentInterval(currentInterval - 1);
+    clearInterval(intervalId);
   };
 
   return (
-    <SwiftSliderContainer>
-      <SwiftSliderSlides height={height}>
+    <SwiftSliderContainer
+      height={height}
+      className={CSS_OVERRIDE.swiftSliderContainerClass}
+    >
+      <SwiftSliderSlides
+        height={height}
+        className={CSS_OVERRIDE.swiftSliderSlidesClass}
+      >
         {data.map((item, i) => (
           <Slide active={i === currentSlide} src={item.src} key={item.id} />
         ))}
       </SwiftSliderSlides>
       {showDots ? (
-        <SwiftSliderDots>
+        <SwiftSliderDots className={CSS_OVERRIDE.swiftSliderDotsClass}>
           {data.map((item, i) => (
             <Dot
               activeDotColor={activeDotColor}
@@ -136,13 +141,7 @@ ReactSlider.propTypes = {
 };
 
 ReactSlider.defaultProps = {
-  data: [],
-  height: 450,
-  activeDotColor: '#e8784e',
-  interval: 5000,
-  dotColor: '#909192',
-  showDots: true,
-  enableNextAndPrev: true,
+  ...DEFAULT_PROPS,
 };
 
 export default ReactSlider;

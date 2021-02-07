@@ -1,25 +1,6 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  
-  to {
-    opacity: 1;
-  }
-`;
-
-const fadeOut = keyframes`
-  from {
-    opacity: 1;
-  }
-  
-  to {
-    opacity: 0;
-  }
-`;
+import styled from 'styled-components';
+import { CSS_OVERRIDE } from '../config';
 
 const SwiftSliderSlide = styled.li`
   background-position: center;
@@ -29,16 +10,21 @@ const SwiftSliderSlide = styled.li`
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: ${props => (props.active ? '2' : '0')};
-  visibility: ${props => (props.active ? 'visible' : 'hidden')};
-  transition: visibility 0.3s;
-  animation: ${props => (props.active ? fadeIn : fadeOut)} 0.8s;
-  background-image: url('${props => props.backgroundImage}');
-  will-change: opacity;
-  will-change: visibility;
-  will-change: z-index;
+  z-index: ${(props) => (props.active ? '2' : '0')};
+  opacity: ${(props) => (props.active ? 1 : 0)};
+  transition: opacity 1s linear;
+  background-image: url('${(props) => props.backgroundImage}');
 `;
 
 export default function Slide({ src, active }) {
-  return <SwiftSliderSlide backgroundImage={src} active={active} />;
+  const className = active
+    ? CSS_OVERRIDE.swiftSliderActiveSlideClass
+    : CSS_OVERRIDE.swiftSliderSlideClass;
+  return (
+    <SwiftSliderSlide
+      backgroundImage={src}
+      active={active}
+      className={className}
+    />
+  );
 }

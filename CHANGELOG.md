@@ -5,6 +5,47 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## vnext
+- ~~add css override handles~~
+- customize css properties:
+    1. add width
+    1. update height
+    1. max-width & height for mobile responsiveness
+- dot properties:
+    1. size
+    1. border colour
+    1. has border
+- add arrow
+    1. show arrow
+- play & pause button
+    1. show play & pause button
+- add thumbnails
+    1. show thumbnails
+    1. thumbnail bar position
+- show slide number & total
+- allow infinite scroll
+- add slide transition delay
+- add carousal transition
+- add legend
+
+
+    
+
+## [7.0.0] - 2021-02-07
+### Changed
+- add css override handles - [@zulucoda](https://github.com/zulucoda).
+  1. `.swift-slider-container` - override slider container (slider wrapper)
+  1. `.swift-slider-slides` - override slides container
+  1. `.swift-slider-active-slide` - override active slide (current active slide displayed)
+  1. `.swift-slider-slide` - override all slides
+  1. `.swift-slider-dots` - override dots (bullets) container
+  1. `.swift-slider-active-dot` - override active dot (bullet)
+  1. `.swift-slider-dot` - override all dots (bullets)
+  1. `.swift-slider-prev-btn` - override previous button
+  1. `.swift-slider-next-btn` - override next button
+- fixed slider animation - [@zulucoda](https://github.com/zulucoda).
+- fixed intervals when clicking on next and previous buttons - [@zulucoda](https://github.com/zulucoda).
+- improved javascript example - [@zulucoda](https://github.com/zulucoda).
 
 ## [6.5.0] - 2020-07-25
 ### Changed

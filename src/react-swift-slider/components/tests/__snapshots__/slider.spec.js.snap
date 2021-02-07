@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider - Unit Test css override handles should get all dots by using className - this will allow for default styling override 1`] = `
+NodeList [
+  <li
+    class="sc-eCssSg ihWeoK swift-slider-dot"
+  />,
+  <li
+    class="sc-eCssSg ihWeoK swift-slider-dot"
+  />,
+  <li
+    class="sc-eCssSg ihWeoK swift-slider-dot"
+  />,
+  <li
+    class="sc-eCssSg ihWeoK swift-slider-dot"
+  />,
+]
+`;
+
+exports[`Slider - Unit Test css override handles should get all slides by using className - this will allow for default styling override 1`] = `
+NodeList [
+  <li
+    class="sc-bdfBwQ ikkXqw swift-slider-slide"
+  />,
+  <li
+    class="sc-bdfBwQ jiHQzm swift-slider-slide"
+  />,
+  <li
+    class="sc-bdfBwQ jsntWD swift-slider-slide"
+  />,
+  <li
+    class="sc-bdfBwQ eoYvGB swift-slider-slide"
+  />,
+]
+`;
+
+exports[`Slider - Unit Test css override handles should get slider container by using className - this will allow for default styling override 1`] = `
+<div
+  class="sc-jSgupP prcHq swift-slider-container"
+  height="450"
+>
+  <ul
+    class="sc-gKsewC dYsBIF swift-slider-slides"
+    height="450"
+  >
+    <li
+      class="sc-bdfBwQ AtNpO swift-slider-active-slide"
+    />
+    <li
+      class="sc-bdfBwQ ikkXqw swift-slider-slide"
+    />
+    <li
+      class="sc-bdfBwQ jiHQzm swift-slider-slide"
+    />
+    <li
+      class="sc-bdfBwQ jsntWD swift-slider-slide"
+    />
+    <li
+      class="sc-bdfBwQ eoYvGB swift-slider-slide"
+    />
+  </ul>
+  <ul
+    class="sc-iBPRYJ jaCHMg swift-slider-dots"
+  >
+    <li
+      class="sc-eCssSg bRDNPX swift-slider-active-dot"
+    />
+    <li
+      class="sc-eCssSg ihWeoK swift-slider-dot"
+    />
+    <li
+      class="sc-eCssSg ihWeoK swift-slider-dot"
+    />
+    <li
+      class="sc-eCssSg ihWeoK swift-slider-dot"
+    />
+    <li
+      class="sc-eCssSg ihWeoK swift-slider-dot"
+    />
+  </ul>
+  <div
+    class="sc-gsTCUz sc-dlfnbm gLXrjP jAVIW swift-slider-prev-btn"
+    height="450"
+  />
+  <div
+    class="sc-gsTCUz sc-hKgILt gLXrjP kcsjwH swift-slider-next-btn"
+    height="450"
+  />
+</div>
+`;
+
+exports[`Slider - Unit Test css override handles should get slider dots container by using className - this will allow for default styling override 1`] = `
+<ul
+  class="sc-iBPRYJ jaCHMg swift-slider-dots"
+>
+  <li
+    class="sc-eCssSg bRDNPX swift-slider-active-dot"
+  />
+  <li
+    class="sc-eCssSg ihWeoK swift-slider-dot"
+  />
+  <li
+    class="sc-eCssSg ihWeoK swift-slider-dot"
+  />
+  <li
+    class="sc-eCssSg ihWeoK swift-slider-dot"
+  />
+  <li
+    class="sc-eCssSg ihWeoK swift-slider-dot"
+  />
+</ul>
+`;
+
+exports[`Slider - Unit Test css override handles should get slider slides container by using className - this will allow for default styling override 1`] = `
+<ul
+  class="sc-gKsewC dYsBIF swift-slider-slides"
+  height="450"
+>
+  <li
+    class="sc-bdfBwQ AtNpO swift-slider-active-slide"
+  />
+  <li
+    class="sc-bdfBwQ ikkXqw swift-slider-slide"
+  />
+  <li
+    class="sc-bdfBwQ jiHQzm swift-slider-slide"
+  />
+  <li
+    class="sc-bdfBwQ jsntWD swift-slider-slide"
+  />
+  <li
+    class="sc-bdfBwQ eoYvGB swift-slider-slide"
+  />
+</ul>
+`;
+
+exports[`Slider - Unit Test css override handles should get the active dot by using className - this will allow for default styling override 1`] = `
+NodeList [
+  <li
+    class="sc-eCssSg bRDNPX swift-slider-active-dot"
+  />,
+]
+`;
+
+exports[`Slider - Unit Test css override handles should get the active slide by using className - this will allow for default styling override 1`] = `
+NodeList [
+  <li
+    class="sc-bdfBwQ AtNpO swift-slider-active-slide"
+  />,
+]
+`;
+
+exports[`Slider - Unit Test css override handles should get the next btn by using className - this will allow for default styling override 1`] = `
+<div
+  class="sc-gsTCUz sc-hKgILt gLXrjP kcsjwH swift-slider-next-btn"
+  height="450"
+/>
+`;
+
+exports[`Slider - Unit Test css override handles should get the previous btn by using className - this will allow for default styling override 1`] = `
+<div
+  class="sc-gsTCUz sc-dlfnbm gLXrjP jAVIW swift-slider-prev-btn"
+  height="450"
+/>
+`;

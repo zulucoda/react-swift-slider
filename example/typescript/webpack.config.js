@@ -1,3 +1,5 @@
+const PORT = 5000;
+
 module.exports = {
   entry: './app/main.tsx',
   devtool: 'inline-source-map',
@@ -18,5 +20,7 @@ module.exports = {
   },
   devServer: {
     inline: false,
+    port: PORT,
+    hot: true,
   },
 };

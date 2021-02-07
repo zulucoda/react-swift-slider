@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-export const DIRECTION = {
-  prev: 'prev',
-  next: 'next',
-};
+import { CSS_OVERRIDE, DIRECTION } from '../config';
 
 const SwiftSliderControlBase = styled.div`
   position: absolute;
@@ -15,7 +11,7 @@ const SwiftSliderControlBase = styled.div`
   z-index: 10;
   padding: 0 2rem;
   width: 30%;
-  height: ${props => props.height}px;
+  height: ${(props) => props.height}px;
   cursor: pointer;
   align-items: center;
 `;
@@ -41,8 +37,16 @@ export default function Control({
   height,
 }) {
   return direction === DIRECTION.prev ? (
-    <SwiftSliderControlPrev onClick={onPressPrev} height={height} />
+    <SwiftSliderControlPrev
+      onClick={onPressPrev}
+      height={height}
+      className={CSS_OVERRIDE.swiftSliderPreviousBtnClass}
+    />
   ) : (
-    <SwiftSliderControlNext onClick={onPressNext} height={height} />
+    <SwiftSliderControlNext
+      onClick={onPressNext}
+      height={height}
+      className={CSS_OVERRIDE.swiftSliderNextBtnClass}
+    />
   );
 }

@@ -5,7 +5,8 @@
  */
 import React from 'react';
 import { render, fireEvent, cleanup } from '@testing-library/react';
-import Control, { DIRECTION } from '../Control';
+import Control from '../Control';
+import { DIRECTION } from '../../config';
 
 describe('Control - Unit Test', () => {
   afterEach(cleanup);
