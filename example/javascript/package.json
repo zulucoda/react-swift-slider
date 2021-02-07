@@ -4,7 +4,9 @@
   "description": "Simple example app for react-swift-slider",
   "main": "dist/bundle.js",
   "scripts": {
-    "start": "webpack serve --config webpack.config.js --progress --color"
+    "start": "webpack serve --config webpack.config.js --progress --color",
+    "build": "webpack --config webpack.deploy.config.js --progress --color",
+    "deploy": "serve dist"
   },
   "author": "Muzikayise Flynn Buthelezi (zuluCoda)",
   "license": "MIT",
@@ -15,6 +17,8 @@
     "@babel/preset-react": "7.12.13",
     "babel-loader": "8.2.2",
     "react-hot-loader": "4.13.0",
+    "serve": "^11.3.2",
+    "terser-webpack-plugin": "^5.1.1",
     "webpack": "5.21.1",
     "webpack-cli": "4.5.0",
     "webpack-dev-server": "^3.11.2"

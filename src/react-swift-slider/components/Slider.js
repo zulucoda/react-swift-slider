@@ -5,7 +5,7 @@ import Slide from './Slide';
 import Control from './Control';
 import Dot from './Dot';
 import { useInterval } from '../hooks/use-interval';
-import { CSS_OVERRIDE, DIRECTION } from '../config';
+import { CSS_OVERRIDE, DEFAULT_PROPS, DIRECTION } from '../config';
 
 const SwiftSliderContainer = styled.div`
   position: relative;
@@ -140,13 +140,7 @@ ReactSlider.propTypes = {
 };
 
 ReactSlider.defaultProps = {
-  data: [],
-  height: 450,
-  activeDotColor: '#e8784e',
-  interval: 5000,
-  dotColor: '#909192',
-  showDots: true,
-  enableNextAndPrev: true,
+  ...DEFAULT_PROPS,
 };
 
 export default ReactSlider;
