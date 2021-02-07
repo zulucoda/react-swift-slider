@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ## vnext
-- add css override handle
+- ~~add css override handles~~
 - customize css properties:
     1. add width
     1. update height
@@ -30,6 +30,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
     
+
+## [7.0.0] - 2021-02-07
+### Changed
+- add css override handles - [@zulucoda](https://github.com/zulucoda).
+  1. `.swift-slider-container` - override slider container (slider wrapper)
+  1. `.swift-slider-slides` - override slides container
+  1. `.swift-slider-active-slide` - override active slide (current active slide displayed)
+  1. `.swift-slider-slide` - override all slides
+  1. `.swift-slider-dots` - override dots (bullets) container
+  1. `.swift-slider-active-dot` - override active dot (bullet)
+  1. `.swift-slider-dot` - override all dots (bullets)
+  1. `.swift-slider-prev-btn` - override previous button
+  1. `.swift-slider-next-btn` - override next button
+- fixed slider animation - [@zulucoda](https://github.com/zulucoda).
+- fixed intervals when clicking on next and previous buttons - [@zulucoda](https://github.com/zulucoda).
+- improved javascript example - [@zulucoda](https://github.com/zulucoda).
 
 ## [6.5.0] - 2020-07-25
 ### Changed
