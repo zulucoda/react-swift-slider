@@ -6,7 +6,6 @@
 import React from 'react';
 import Dot from '../Dot';
 import { render, fireEvent, cleanup } from '@testing-library/react';
-import 'jest-dom/extend-expect';
 
 describe('Dot - Unit Test', () => {
   afterEach(cleanup);

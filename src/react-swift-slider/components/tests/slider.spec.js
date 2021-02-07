@@ -6,7 +6,6 @@
 import React from 'react';
 import { render, fireEvent, cleanup } from '@testing-library/react';
 import ReactSlider from '../Slider';
-import 'jest-dom/extend-expect';
 
 describe('Slider - Unit Test', () => {
   afterEach(cleanup);
@@ -52,21 +51,17 @@ describe('Slider - Unit Test', () => {
   it('should go to position 4 when on the first slide when clicking on next', () => {
     const { container } = render(<ReactSlider data={data} />);
 
-    expect(container.querySelector('div > ul > li')).toHaveStyle(
-      'visibility : visible',
-    );
+    expect(container.querySelector('div > ul > li')).toHaveStyle('opacity : 1');
     expect(container.querySelector('div > ul > :nth-child(5)')).toHaveStyle(
-      'visibility : hidden',
+      'opacity : 0',
     );
 
     const prevButton = container.querySelector('div >:nth-child(3)');
     fireEvent.click(prevButton);
 
-    expect(container.querySelector('div > ul > li')).toHaveStyle(
-      'visibility : hidden',
-    );
+    expect(container.querySelector('div > ul > li')).toHaveStyle('opacity : 0');
     expect(container.querySelector('div > ul > :nth-child(5)')).toHaveStyle(
-      'visibility : visible',
+      'opacity : 1',
     );
   });
 
@@ -75,75 +70,61 @@ describe('Slider - Unit Test', () => {
     const prevButton = container.querySelector('div >:nth-child(3)');
     fireEvent.click(prevButton);
 
-    expect(container.querySelector('div > ul > li')).toHaveStyle(
-      'visibility : hidden',
-    );
+    expect(container.querySelector('div > ul > li')).toHaveStyle('opacity : 0');
     expect(container.querySelector('div > ul > :nth-child(4)')).toHaveStyle(
-      'visibility : hidden',
+      'opacity : 0',
     );
     expect(container.querySelector('div > ul > :nth-child(5)')).toHaveStyle(
-      'visibility : visible',
+      'opacity : 1',
     );
 
     fireEvent.click(prevButton);
 
-    expect(container.querySelector('div > ul > li')).toHaveStyle(
-      'visibility : hidden',
-    );
+    expect(container.querySelector('div > ul > li')).toHaveStyle('opacity : 0');
     expect(container.querySelector('div > ul > :nth-child(4)')).toHaveStyle(
-      'visibility : visible',
+      'opacity : 1',
     );
     expect(container.querySelector('div > ul > :nth-child(5)')).toHaveStyle(
-      'visibility : hidden',
+      'opacity : 0',
     );
   });
 
   it('should go to next slide', () => {
     const { container } = render(<ReactSlider data={data} />);
-    expect(container.querySelector('div > ul > li')).toHaveStyle(
-      'visibility : visible',
-    );
+    expect(container.querySelector('div > ul > li')).toHaveStyle('opacity : 1');
     expect(container.querySelector('div > ul > :nth-child(2)')).toHaveStyle(
-      'visibility : hidden',
+      'opacity : 0',
     );
 
     const nextButton = container.querySelector('div >:nth-child(4)');
     fireEvent.click(nextButton);
 
-    expect(container.querySelector('div > ul > li')).toHaveStyle(
-      'visibility : hidden',
-    );
+    expect(container.querySelector('div > ul > li')).toHaveStyle('opacity : 0');
     expect(container.querySelector('div > ul > :nth-child(2)')).toHaveStyle(
-      'visibility : visible',
+      'opacity : 1',
     );
   });
 
   it('should go to position 0 when on the last slide when clicking on next', () => {
     const { container } = render(<ReactSlider data={[data[0], data[1]]} />);
-    expect(container.querySelector('div > ul > li')).toHaveStyle(
-      'visibility : visible',
-    );
+    expect(container.querySelector('div > ul > li')).toHaveStyle('opacity : 1');
     expect(container.querySelector('div > ul > :nth-child(2)')).toHaveStyle(
-      'visibility : hidden',
+      'opacity : 0',
     );
 
     const nextButton = container.querySelector('div >:nth-child(4)');
     fireEvent.click(nextButton);
 
-    expect(container.querySelector('div > ul > li')).toHaveStyle(
-      'visibility : hidden',
-    );
+    expect(container.querySelector('div > ul > li')).toHaveStyle('opacity : 0');
     expect(container.querySelector('div > ul > :nth-child(2)')).toHaveStyle(
-      'visibility : visible',
+      'opacity : 1',
     );
 
     fireEvent.click(nextButton);
 
-    expect(container.querySelector('div > ul > li')).toHaveStyle(
-      'visibility : visible',
-    );
+    expect(container.querySelector('div > ul > li')).toHaveStyle('opacity : 1');
     expect(container.querySelector('div > ul > :nth-child(2)')).toHaveStyle(
-      'visibility : hidden',
+      'opacity : 0',
     );
   });
 
