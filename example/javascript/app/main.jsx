@@ -1,8 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Slider, {
-  CSS_OVERRIDE_EXTERNAL,
-} from '../../../lib/react-swift-slider.min';
+import Slider from '../../../lib/react-swift-slider.min';
 
 const data = [
   {
@@ -30,9 +27,25 @@ const data = [
     src:
       'https://media.mfbproject.co.za/repos/ARWP_Infra_Desk_1920_1080_Quad.png',
   },
+  {
+    id: '6',
+    src:
+      'https://media.mfbproject.co.za/repos/ARWP_RearRunning_Desk_1920_1080_Hero.png',
+  },
+  {
+    id: '7',
+    src:
+      'https://media.mfbproject.co.za/repos/ARWP_Running_Desk_1920_1080_Engine.png',
+  },
+  {
+    id: '8',
+    src:
+      'https://media.mfbproject.co.za/repos/ARWP_Rear34Run_Desk_1920_1080_Hero.png',
+  },
 ];
 
-ReactDOM.render(
-  <Slider data={data} enableNextAndPrev />,
-  document.querySelector('.app'),
-);
+const Main = () => {
+  return <Slider data={data} height={900} enableNextAndPrev />;
+};
+
+export default Main;

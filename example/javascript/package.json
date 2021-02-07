@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --config webpack.config.js --progress --color",
     "build": "webpack --config webpack.deploy.config.js --progress --color",
-    "deploy": "serve dist"
+    "deploy": "npm run build && serve dist"
   },
   "author": "Muzikayise Flynn Buthelezi (zuluCoda)",
   "license": "MIT",

@@ -8,7 +8,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app: ['./app/main.jsx'],
+    app: ['./app/index.jsx'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

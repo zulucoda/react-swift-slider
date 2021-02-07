@@ -82,7 +82,10 @@ function ReactSlider({
   };
 
   return (
-    <SwiftSliderContainer className={CSS_OVERRIDE.swiftSliderContainerClass}>
+    <SwiftSliderContainer
+      height={height}
+      className={CSS_OVERRIDE.swiftSliderContainerClass}
+    >
       <SwiftSliderSlides
         height={height}
         className={CSS_OVERRIDE.swiftSliderSlidesClass}

@@ -13,7 +13,7 @@ module.exports = {
     app: [
       `webpack-dev-server/client?http://0.0.0.0:${PORT}`,
       'webpack/hot/only-dev-server',
-      './app/main.jsx',
+      './app/index.jsx',
     ],
   },
   output: {
