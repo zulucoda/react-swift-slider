@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider - Unit Test should get slider by using className - this will allow for default styling override 1`] = `
+<div
+  class="sc-jSgupP prcHq swift-slider-container"
+>
+  <ul
+    class="sc-gKsewC dYsBIF swift-slider-slides"
+    height="450"
+  >
+    <li
+      class="sc-bdfBwQ AtNpO swift-slider-slide"
+    />
+    <li
+      class="sc-bdfBwQ ikkXqw swift-slider-slide"
+    />
+    <li
+      class="sc-bdfBwQ jiHQzm swift-slider-slide"
+    />
+    <li
+      class="sc-bdfBwQ jsntWD swift-slider-slide"
+    />
+    <li
+      class="sc-bdfBwQ eoYvGB swift-slider-slide"
+    />
+  </ul>
+  <ul
+    class="sc-iBPRYJ jaCHMg swift-slider-dots"
+  >
+    <li
+      class="sc-eCssSg bRDNPX swift-slider-dot"
+    />
+    <li
+      class="sc-eCssSg ihWeoK swift-slider-dot"
+    />
+    <li
+      class="sc-eCssSg ihWeoK swift-slider-dot"
+    />
+    <li
+      class="sc-eCssSg ihWeoK swift-slider-dot"
+    />
+    <li
+      class="sc-eCssSg ihWeoK swift-slider-dot"
+    />
+  </ul>
+  <div
+    class="sc-gsTCUz sc-dlfnbm gLXrjP jAVIW swift-slider-prev-btn"
+    height="450"
+  />
+  <div
+    class="sc-gsTCUz sc-hKgILt gLXrjP kcsjwH swift-slider-next-btn"
+    height="450"
+  />
+</div>
+`;

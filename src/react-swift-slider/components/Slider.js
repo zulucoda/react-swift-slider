@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Slide from './Slide';
-import Control, { DIRECTION } from './Control';
+import Control from './Control';
 import Dot from './Dot';
 import { useInterval } from '../hooks/use-interval';
+import { CSS_OVERRIDE, DIRECTION } from '../config';
 
 const SwiftSliderContainer = styled.div`
   position: relative;
-  height: ${props => props.height || '450'}px;
+  height: ${(props) => props.height || '450'}px;
   @media (max-width: 600px) {
     height: 250px;
   }
@@ -19,7 +20,7 @@ const SwiftSliderSlides = styled.ul`
   padding: 0;
   margin: 0;
   list-style: none;
-  height: ${props => props.height || '450'}px;
+  height: ${(props) => props.height || '450'}px;
   @media (max-width: 600px) {
     height: 250px;
   }
@@ -54,7 +55,7 @@ function ReactSlider({
   }, currentInterval);
 
   useEffect(() => {
-    data.forEach(img => {
+    data.forEach((img) => {
       const image = new Image();
       image.src = img.src;
     });
@@ -75,20 +76,23 @@ function ReactSlider({
     setCurrentInterval(currentInterval + 1);
   };
 
-  const goToSlide = idx => {
+  const goToSlide = (idx) => {
     setCurrentSlide(idx);
     setCurrentInterval(currentInterval - 1);
   };
 
   return (
-    <SwiftSliderContainer>
-      <SwiftSliderSlides height={height}>
+    <SwiftSliderContainer className={CSS_OVERRIDE.swiftSliderContainerClass}>
+      <SwiftSliderSlides
+        height={height}
+        className={CSS_OVERRIDE.swiftSliderSlidesClass}
+      >
         {data.map((item, i) => (
           <Slide active={i === currentSlide} src={item.src} key={item.id} />
         ))}
       </SwiftSliderSlides>
       {showDots ? (
-        <SwiftSliderDots>
+        <SwiftSliderDots className={CSS_OVERRIDE.swiftSliderDotsClass}>
           {data.map((item, i) => (
             <Dot
               activeDotColor={activeDotColor}

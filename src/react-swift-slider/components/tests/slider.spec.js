@@ -6,6 +6,7 @@
 import React from 'react';
 import { render, fireEvent, cleanup } from '@testing-library/react';
 import ReactSlider from '../Slider';
+import { CSS_OVERRIDE_EXTERNAL } from '../../config';
 
 describe('Slider - Unit Test', () => {
   afterEach(cleanup);
@@ -160,5 +161,12 @@ describe('Slider - Unit Test', () => {
     );
     expect(container.querySelector('div >:nth-child(3)')).toBeFalsy();
     expect(container.querySelector('div >:nth-child(4)')).toBeFalsy();
+  });
+
+  it('should get slider by using className - this will allow for default styling override', () => {
+    const { container } = render(<ReactSlider data={data} />);
+    expect(
+      container.querySelector(CSS_OVERRIDE_EXTERNAL.swiftSliderContainerClass),
+    ).toMatchSnapshot();
   });
 });
