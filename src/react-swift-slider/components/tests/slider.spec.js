@@ -172,7 +172,7 @@ describe('Slider - Unit Test', () => {
         ),
       ).toMatchSnapshot();
     });
-    it('should get slider slides by using className - this will allow for default styling override', () => {
+    it('should get slider slides container by using className - this will allow for default styling override', () => {
       const { container } = render(<ReactSlider data={data} />);
       expect(
         container.querySelector(CSS_OVERRIDE_EXTERNAL.swiftSliderSlidesClass),
@@ -182,6 +182,32 @@ describe('Slider - Unit Test', () => {
       const { container } = render(<ReactSlider data={data} />);
       expect(
         container.querySelector(CSS_OVERRIDE_EXTERNAL.swiftSliderDotsClass),
+      ).toMatchSnapshot();
+    });
+    it('should get all slides by using className - this will allow for default styling override', () => {
+      const { container } = render(<ReactSlider data={data} />);
+      expect(
+        container.querySelectorAll(CSS_OVERRIDE_EXTERNAL.swiftSliderSlideClass),
+      ).toMatchSnapshot();
+    });
+    it('should get all dots by using className - this will allow for default styling override', () => {
+      const { container } = render(<ReactSlider data={data} />);
+      expect(
+        container.querySelectorAll(CSS_OVERRIDE_EXTERNAL.swiftSliderDotClass),
+      ).toMatchSnapshot();
+    });
+    it('should get the previous btn by using className - this will allow for default styling override', () => {
+      const { container } = render(<ReactSlider data={data} />);
+      expect(
+        container.querySelector(
+          CSS_OVERRIDE_EXTERNAL.swiftSliderPreviousBtnClass,
+        ),
+      ).toMatchSnapshot();
+    });
+    it('should get the next btn by using className - this will allow for default styling override', () => {
+      const { container } = render(<ReactSlider data={data} />);
+      expect(
+        container.querySelector(CSS_OVERRIDE_EXTERNAL.swiftSliderNextBtnClass),
       ).toMatchSnapshot();
     });
   });

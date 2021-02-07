@@ -6,6 +6,7 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import Slide from '../Slide';
+import { CSS_OVERRIDE_EXTERNAL } from '../../config';
 
 describe('React Swift Slider: Slide - Unit Test', () => {
   afterEach(cleanup);
@@ -38,4 +39,6 @@ describe('React Swift Slider: Slide - Unit Test', () => {
       expect(container.firstChild).toMatchSnapshot();
     });
   });
+
+  describe('css override handles', () => {});
 });

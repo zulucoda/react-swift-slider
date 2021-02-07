@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CSS_OVERRIDE } from '../config';
 
 const SwiftSliderSlide = styled.li`
   background-position: center;
@@ -16,5 +17,11 @@ const SwiftSliderSlide = styled.li`
 `;
 
 export default function Slide({ src, active }) {
-  return <SwiftSliderSlide backgroundImage={src} active={active} />;
+  return (
+    <SwiftSliderSlide
+      backgroundImage={src}
+      active={active}
+      className={CSS_OVERRIDE.swiftSliderSlideClass}
+    />
+  );
 }

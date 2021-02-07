@@ -2,12 +2,12 @@
 
 exports[`React Swift Slider: Slide - Unit Test when NOT active should render Slide without active css properties 1`] = `
 <li
-  class="sc-bdfBwQ ecRqZV"
+  class="sc-bdfBwQ ecRqZV swift-slider-slide"
 />
 `;
 
 exports[`React Swift Slider: Slide - Unit Test when active should render Slide with active css properties 1`] = `
 <li
-  class="sc-bdfBwQ rGDLu"
+  class="sc-bdfBwQ rGDLu swift-slider-slide"
 />
 `;
