@@ -31,6 +31,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
     
 
+## [7.0.1] - 2021-02-13
+### Changed
+- npm publish clean up unused files - [@zulucoda](https://github.com/zulucoda).
+
 ## [7.0.0] - 2021-02-07
 ### Changed
 - add css override handles - [@zulucoda](https://github.com/zulucoda).

@@ -8,3 +8,10 @@ build/
 example/
 .idea
 react-swift-slider-example.gif
+.babelrc
+.prettierrc
+.prettierignore
+.travis.yml
+jest-setup.js
+rollup.config.js
+CHANGELOG.md
