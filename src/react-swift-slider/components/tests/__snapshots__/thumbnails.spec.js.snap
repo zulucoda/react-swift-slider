@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React Swift Slider - Components - Thumbnails - Unit Test When Show Thumbnails Is True should render thumbnails using origin source when thumbnail source is not supplied 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ daXxBD swift-slider-thumbnails-container"
+  >
+    <img
+      alt="Slide 1"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_1"
+      src="https://media.mfbproject.co.za/repos/2017_alfa-romeo_stelvio_leaked_02.jpg"
+    />
+    <img
+      alt="Slide 2"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_2"
+      src="https://media.mfbproject.co.za/repos/2017_alfa_romeo_stelvioquadrifoglio_official_09.jpg"
+    />
+    <img
+      alt="Slide 3"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_3"
+      src="https://media.mfbproject.co.za/repos/2018-alfa-romeo-stelvio-quadrifoglio-specs-photos-speed-2.jpg"
+    />
+    <img
+      alt="Slide 4"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_4"
+      src="https://media.mfbproject.co.za/repos/alfa-romeo-giulia-quadrifoglio-2017-us-wallpapers-and-hd-images-13.jpg"
+    />
+    <img
+      alt="Slide 5"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_5"
+      src="https://media.mfbproject.co.za/repos/ARWP_Infra_Desk_1920_1080_Quad.png"
+    />
+    <img
+      alt="Slide 6"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_6"
+      src="https://media.mfbproject.co.za/repos/ARWP_Running_Desk_1920_1080_Engine.png"
+    />
+    <img
+      alt="Slide 7"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_7"
+      src="https://media.mfbproject.co.za/repos/ARWP_Rear34Run_Desk_1920_1080_Hero.png"
+    />
+  </div>
+</div>
+`;
+
+exports[`React Swift Slider - Components - Thumbnails - Unit Test When Show Thumbnails Is True should render thumbnails when thumbnail source is supplied 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ daXxBD swift-slider-thumbnails-container"
+  >
+    <img
+      alt="Slide 1"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_1"
+      src="https://media.mfbproject.co.za/repos/2017_alfa-romeo_stelvio_leaked_02.jpg"
+    />
+    <img
+      alt="Slide 2"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_2"
+      src="https://media.mfbproject.co.za/repos/2017_alfa_romeo_stelvioquadrifoglio_official_09.jpg"
+    />
+    <img
+      alt="Slide 3"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_3"
+      src="https://media.mfbproject.co.za/repos/2018-alfa-romeo-stelvio-quadrifoglio-specs-photos-speed-2.jpg"
+    />
+    <img
+      alt="Slide 4"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_4"
+      src="https://media.mfbproject.co.za/repos/alfa-romeo-giulia-quadrifoglio-2017-us-wallpapers-and-hd-images-13.jpg"
+    />
+    <img
+      alt="Slide 5"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_5"
+      src="https://media.mfbproject.co.za/repos/ARWP_Infra_Desk_1920_1080_Quad.png"
+    />
+    <img
+      alt="Slide 6"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_6"
+      src="https://media.mfbproject.co.za/repos/ARWP_Running_Desk_1920_1080_Engine.png"
+    />
+    <img
+      alt="Slide 7"
+      class="sc-gsTCUz dVUBcg swift-slider-thumbnail"
+      id="swiftSliderThumb_7"
+      src="https://media.mfbproject.co.za/repos/ARWP_Rear34Run_Desk_1920_1080_Hero.png"
+    />
+  </div>
+</div>
+`;
