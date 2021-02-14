@@ -20,47 +20,47 @@ NodeList [
 exports[`Slider - Unit Test css override handles should get all slides by using className - this will allow for default styling override 1`] = `
 NodeList [
   <li
-    class="sc-bdfBwQ ikkXqw swift-slider-slide"
+    class="sc-bdfBwQ esexun swift-slider-slide"
   />,
   <li
-    class="sc-bdfBwQ jiHQzm swift-slider-slide"
+    class="sc-bdfBwQ kQtNob swift-slider-slide"
   />,
   <li
-    class="sc-bdfBwQ jsntWD swift-slider-slide"
+    class="sc-bdfBwQ iGSsDB swift-slider-slide"
   />,
   <li
-    class="sc-bdfBwQ eoYvGB swift-slider-slide"
+    class="sc-bdfBwQ bfqwzu swift-slider-slide"
   />,
 ]
 `;
 
 exports[`Slider - Unit Test css override handles should get slider container by using className - this will allow for default styling override 1`] = `
 <div
-  class="sc-jSgupP prcHq swift-slider-container"
+  class="sc-fubCfw grUhyC swift-slider-container"
   height="450"
 >
   <ul
-    class="sc-gKsewC dYsBIF swift-slider-slides"
+    class="sc-pFZIQ dVEDgL swift-slider-slides"
     height="450"
   >
     <li
-      class="sc-bdfBwQ AtNpO swift-slider-active-slide"
+      class="sc-bdfBwQ jFksPw swift-slider-active-slide"
     />
     <li
-      class="sc-bdfBwQ ikkXqw swift-slider-slide"
+      class="sc-bdfBwQ esexun swift-slider-slide"
     />
     <li
-      class="sc-bdfBwQ jiHQzm swift-slider-slide"
+      class="sc-bdfBwQ kQtNob swift-slider-slide"
     />
     <li
-      class="sc-bdfBwQ jsntWD swift-slider-slide"
+      class="sc-bdfBwQ iGSsDB swift-slider-slide"
     />
     <li
-      class="sc-bdfBwQ eoYvGB swift-slider-slide"
+      class="sc-bdfBwQ bfqwzu swift-slider-slide"
     />
   </ul>
   <ul
-    class="sc-iBPRYJ jaCHMg swift-slider-dots"
+    class="sc-jrAGrp iiYTZC swift-slider-dots"
   >
     <li
       class="sc-eCssSg bRDNPX swift-slider-active-dot"
@@ -91,7 +91,7 @@ exports[`Slider - Unit Test css override handles should get slider container by 
 
 exports[`Slider - Unit Test css override handles should get slider dots container by using className - this will allow for default styling override 1`] = `
 <ul
-  class="sc-iBPRYJ jaCHMg swift-slider-dots"
+  class="sc-jrAGrp iiYTZC swift-slider-dots"
 >
   <li
     class="sc-eCssSg bRDNPX swift-slider-active-dot"
@@ -113,23 +113,23 @@ exports[`Slider - Unit Test css override handles should get slider dots containe
 
 exports[`Slider - Unit Test css override handles should get slider slides container by using className - this will allow for default styling override 1`] = `
 <ul
-  class="sc-gKsewC dYsBIF swift-slider-slides"
+  class="sc-pFZIQ dVEDgL swift-slider-slides"
   height="450"
 >
   <li
-    class="sc-bdfBwQ AtNpO swift-slider-active-slide"
+    class="sc-bdfBwQ jFksPw swift-slider-active-slide"
   />
   <li
-    class="sc-bdfBwQ ikkXqw swift-slider-slide"
+    class="sc-bdfBwQ esexun swift-slider-slide"
   />
   <li
-    class="sc-bdfBwQ jiHQzm swift-slider-slide"
+    class="sc-bdfBwQ kQtNob swift-slider-slide"
   />
   <li
-    class="sc-bdfBwQ jsntWD swift-slider-slide"
+    class="sc-bdfBwQ iGSsDB swift-slider-slide"
   />
   <li
-    class="sc-bdfBwQ eoYvGB swift-slider-slide"
+    class="sc-bdfBwQ bfqwzu swift-slider-slide"
   />
 </ul>
 `;
@@ -145,7 +145,7 @@ NodeList [
 exports[`Slider - Unit Test css override handles should get the active slide by using className - this will allow for default styling override 1`] = `
 NodeList [
   <li
-    class="sc-bdfBwQ AtNpO swift-slider-active-slide"
+    class="sc-bdfBwQ jFksPw swift-slider-active-slide"
   />,
 ]
 `;

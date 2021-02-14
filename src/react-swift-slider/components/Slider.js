@@ -5,7 +5,22 @@ import Slide from './Slide';
 import Control from './Control';
 import Dot from './Dot';
 import { useInterval } from '../hooks/use-interval';
-import { CSS_OVERRIDE, DEFAULT_PROPS, DIRECTION } from '../config';
+import {
+  CSS_OVERRIDE,
+  DEFAULT_PROPS,
+  DIRECTION,
+  SliderDataType,
+} from '../config';
+import SwiftSliderThumbnails from './Thumbnails';
+import { getSlideId } from '../helpers';
+
+const SwiftSliderWrapper = styled.div`
+  overflow: hidden;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-gap: 10px;
+`;
 
 const SwiftSliderContainer = styled.div`
   position: relative;
@@ -46,6 +61,7 @@ function ReactSlider({
   dotColor,
   showDots,
   enableNextAndPrev,
+  showThumbnails,
 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [intervalId] = useInterval(() => {
@@ -80,64 +96,74 @@ function ReactSlider({
   };
 
   return (
-    <SwiftSliderContainer
-      height={height}
-      className={CSS_OVERRIDE.swiftSliderContainerClass}
-    >
-      <SwiftSliderSlides
+    <SwiftSliderWrapper>
+      <SwiftSliderContainer
         height={height}
-        className={CSS_OVERRIDE.swiftSliderSlidesClass}
+        className={CSS_OVERRIDE.swiftSliderContainerClass}
       >
-        {data.map((item, i) => (
-          <Slide active={i === currentSlide} src={item.src} key={item.id} />
-        ))}
-      </SwiftSliderSlides>
-      {showDots ? (
-        <SwiftSliderDots className={CSS_OVERRIDE.swiftSliderDotsClass}>
+        <SwiftSliderSlides
+          height={height}
+          className={CSS_OVERRIDE.swiftSliderSlidesClass}
+        >
           {data.map((item, i) => (
-            <Dot
-              activeDotColor={activeDotColor}
-              dotColor={dotColor}
-              key={i}
+            <Slide
               active={i === currentSlide}
-              onClick={goToSlide}
-              idx={i}
+              src={item.src}
+              key={item.id}
+              id={getSlideId(item.id)}
             />
           ))}
-        </SwiftSliderDots>
-      ) : (
-        ''
-      )}
-      {enableNextAndPrev ? (
-        <Control
-          onPressPrev={prevSlide}
-          direction={DIRECTION.prev}
-          height={height}
-        />
-      ) : (
-        ''
-      )}
-      {enableNextAndPrev ? (
-        <Control
-          onPressNext={nextSlide}
-          direction={DIRECTION.next}
-          height={height}
-        />
-      ) : (
-        ''
-      )}
-    </SwiftSliderContainer>
+        </SwiftSliderSlides>
+        {showDots ? (
+          <SwiftSliderDots className={CSS_OVERRIDE.swiftSliderDotsClass}>
+            {data.map((item, i) => (
+              <Dot
+                activeDotColor={activeDotColor}
+                dotColor={dotColor}
+                key={i}
+                active={i === currentSlide}
+                onClick={goToSlide}
+                idx={i}
+              />
+            ))}
+          </SwiftSliderDots>
+        ) : (
+          ''
+        )}
+        {enableNextAndPrev ? (
+          <Control
+            onPressPrev={prevSlide}
+            direction={DIRECTION.prev}
+            height={height}
+          />
+        ) : (
+          ''
+        )}
+        {enableNextAndPrev ? (
+          <Control
+            onPressNext={nextSlide}
+            direction={DIRECTION.next}
+            height={height}
+          />
+        ) : (
+          ''
+        )}
+      </SwiftSliderContainer>
+
+      <SwiftSliderThumbnails showThumbnails={showThumbnails} data={data} />
+    </SwiftSliderWrapper>
   );
 }
 
 ReactSlider.propTypes = {
-  data: PropTypes.array.isRequired,
+  activeDotColor: PropTypes.string,
+  data: SliderDataType,
+  dotColor: PropTypes.string,
+  enableNextAndPrev: PropTypes.bool,
   height: PropTypes.number,
   interval: PropTypes.number,
-  activeDotColor: PropTypes.string,
-  dotColor: PropTypes.string,
   showDots: PropTypes.bool,
-  enableNextAndPrev: PropTypes.bool,
+  showThumbnails: PropTypes.bool,
 };
 
 ReactSlider.defaultProps = {
