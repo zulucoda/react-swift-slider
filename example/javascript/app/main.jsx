@@ -40,7 +40,7 @@ const data = [
 ];
 
 const Main = () => {
-  return <Slider data={data} height={900} enableNextAndPrev />;
+  return <Slider data={data} height={900} enableNextAndPrev showThumbnails />;
 };
 
 export default Main;
