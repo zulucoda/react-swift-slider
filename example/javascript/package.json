@@ -17,10 +17,10 @@
     "@babel/preset-react": "7.12.13",
     "babel-loader": "8.2.2",
     "react-hot-loader": "4.13.0",
-    "serve": "^11.3.2",
+    "serve": "11.3.2",
     "terser-webpack-plugin": "^5.1.1",
     "webpack": "5.21.1",
-    "webpack-cli": "4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-cli": "4.9.0",
+    "webpack-dev-server": "4.5.0"
   }
 }
