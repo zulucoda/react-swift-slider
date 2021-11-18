@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/zulucoda/react-swift-slider.svg?branch=master)](https://travis-ci.org/zulucoda/react-swift-slider)
 [![Coverage Status](https://coveralls.io/repos/github/zulucoda/react-swift-slider/badge.svg?branch=master)](https://coveralls.io/github/zulucoda/react-swift-slider?branch=master)
 
-React Swift Slider is a simple image/picture slider for react. `test CI BUILD`
+React Swift Slider is a simple image/picture slider for react.
 
 [![react-swift-slider-example](https://raw.githubusercontent.com/zulucoda/react-swift-slider/master/react-swift-slider-example.gif)](https://react-swift-slider.mfbproject.co.za/)
 
