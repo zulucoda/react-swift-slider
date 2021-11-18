@@ -21,7 +21,7 @@
     "clean-build": "npm run clean:lib && npm run build && npm run copy-declaration",
     "dev-js": "npm run clean-build && cd example/javascript && npm run start",
     "dev-ts": "npm run clean-build && cd example/typescript && npm run start",
-    "prepare": "husky install"
+    "prepare": "is-ci || husky install"
   },
   "keywords": [
     "react",
@@ -55,6 +55,9 @@
     "@babel/plugin-proposal-class-properties": "7.16.0",
     "@babel/preset-env": "7.16.0",
     "@babel/preset-react": "7.16.0",
+    "@rollup/plugin-babel": "5.3.0",
+    "@rollup/plugin-commonjs": "21.0.1",
+    "@rollup/plugin-node-resolve": "13.0.6",
     "@testing-library/jest-dom": "5.15.0",
     "@testing-library/react": "12.1.2",
     "@testing-library/react-hooks": "7.0.2",
@@ -62,6 +65,7 @@
     "babel-loader": "8.2.3",
     "coveralls": "3.1.0",
     "husky": "7.0.4",
+    "is-ci": "^3.0.1",
     "jest": "27.3.1",
     "lint-staged": "12.0.2",
     "prettier": "2.4.1",
@@ -69,9 +73,6 @@
     "react-dom": "17.0.2",
     "react-test-renderer": "17.0.2",
     "rollup": "2.60.0",
-    "@rollup/plugin-babel": "5.3.0",
-    "@rollup/plugin-commonjs": "21.0.1",
-    "@rollup/plugin-node-resolve": "13.0.6",
     "rollup-plugin-terser": "7.0.2",
     "webpack": "5.64.1",
     "webpack-cli": "4.9.1"
