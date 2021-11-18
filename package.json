@@ -20,7 +20,8 @@
     "copy-declaration": "cp src/react-swift-slider/index.d.ts lib/index.d.ts -f",
     "clean-build": "npm run clean:lib && npm run build && npm run copy-declaration",
     "dev-js": "npm run clean-build && cd example/javascript && npm run start",
-    "dev-ts": "npm run clean-build && cd example/typescript && npm run start"
+    "dev-ts": "npm run clean-build && cd example/typescript && npm run start",
+    "prepare": "husky install"
   },
   "keywords": [
     "react",
@@ -100,10 +101,5 @@
       "node_modules/.bin/prettier  --config .prettierrc --write",
       "git add"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
