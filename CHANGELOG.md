@@ -29,6 +29,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - add legend
 
 
+## [7.2.0] - 2021-11-18
+### Changed
+- npm publish clean up .husky files - [@zulucoda](https://github.com/zulucoda).
+
 ## [7.1.0] - 2021-11-18
 ### Changed
 - fix security vulnerabilities 11 2021 - [@zulucoda](https://github.com/zulucoda).
