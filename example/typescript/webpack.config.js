@@ -1,6 +1,8 @@
 const PORT = 5000;
+const path = require('path');
 
 module.exports = {
+  mode: 'development',
   entry: './app/main.tsx',
   devtool: 'inline-source-map',
   module: {
@@ -19,8 +21,10 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
-    inline: false,
     port: PORT,
     hot: true,
+    static: {
+      directory: '.',
+    },
   },
 };
