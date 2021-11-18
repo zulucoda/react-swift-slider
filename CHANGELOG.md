@@ -29,7 +29,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - add legend
 
 
-    
+## [7.1.0] - 2021-11-18
+### Changed
+- fix security vulnerabilities 11 2021 - [@zulucoda](https://github.com/zulucoda).
 
 ## [7.0.1] - 2021-02-13
 ### Changed
